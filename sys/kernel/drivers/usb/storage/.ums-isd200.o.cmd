@@ -1,0 +1,1 @@
+cmd_drivers/usb/storage/ums-isd200.o := /home/mahmoud/prebuilts/gcc/linux-x86/arm/arm-linux-eabi-linaro-4.9/bin/arm-eabi-ld.bfd -EL    -r -o drivers/usb/storage/ums-isd200.o drivers/usb/storage/isd200.o 

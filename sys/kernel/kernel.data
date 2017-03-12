@@ -1,0 +1,73 @@
+EMAKEDATA 6
+
+# This file is generated automatically by Electric Make.
+# Do not edit the contents by hand.
+#
+# ROOTS:
+#   /home/liuzheng5/workspace/com/lenovo/mt6582/source
+
+makes:
+0 0 1 sys/kernel
+0 0 1 sys/kernel/out
+
+jobs:
+0 0 0 sub-make
+0 0 0 include/config/kernel.release
+0 0 0 outputmakefile
+0 0 0 asm-generic
+0 0 0 include/linux/version.h
+0 0 0 scripts_basic
+0 0 0 scripts
+0 0 0 init/modules.builtin
+0 0 0 usr/modules.builtin
+0 0 0 arch/arm/vfp/modules.builtin
+0 0 0 arch/arm/kernel/modules.builtin
+0 0 0 arch/arm/mm/modules.builtin
+0 0 0 arch/arm/common/modules.builtin
+0 0 0 arch/arm/net/modules.builtin
+0 0 0 mediatek/platform/mt6582/kernel/core/modules.builtin
+0 0 0 kernel/modules.builtin
+0 0 0 mm/modules.builtin
+0 0 0 fs/modules.builtin
+0 0 0 ipc/modules.builtin
+0 0 0 security/modules.builtin
+0 0 0 crypto/modules.builtin
+0 0 0 block/modules.builtin
+0 0 0 drivers/modules.builtin
+0 0 0 sound/modules.builtin
+0 0 0 firmware/modules.builtin
+0 0 0 mediatek/kernel/modules.builtin
+0 0 0 mediatek/custom/out/aux/kernel/modules.builtin
+0 0 0 mediatek/platform/mt6582/kernel/drivers/modules.builtin
+0 0 0 arch/arm/oprofile/modules.builtin
+0 0 0 net/modules.builtin
+0 0 0 arch/arm/lib/modules.builtin
+0 0 0 lib/modules.builtin
+0 0 0 modules.builtin
+0 0 0 scripts/mod
+0 0 0 scripts/mod/empty.o
+0 0 0 .tmp_vmlinux1
+0 0 0 init/built-in.o
+1 0 0 .tmp_vmlinux1
+0 0 0 usr
+0 0 0 usr/initramfs_data.cpio
+0 0 0 firmware
+0 0 0 firmware/built-in.o
+0 0 0 firmware/modules.order
+0 0 0 mediatek/custom/out/aux/kernel
+0 0 0 mediatek/custom/out/aux/kernel/built-in.o
+0 0 0 mediatek/custom/out/aux/kernel/modules.order
+
+serial-deps:
+4 0 0 1 1 31 4 0 0 1 2  4 0 0 1 3  4 0 0 1 4  4 0 0 1 5  4 0 0 1 6  4 0 0 1 7  4 0 0 1 8  4 0 0 1 9  4 0 0 1 10  4 0 0 1 11  4 0 0 1 12  4 0 0 1 13  4 0 0 1 14  4 0 0 1 15  4 0 0 1 16  4 0 0 1 17  4 0 0 1 18  4 0 0 1 19  4 0 0 1 20  4 0 0 1 21  4 0 0 1 22  4 0 0 1 23  4 0 0 1 24  4 0 0 1 25  4 0 0 1 26  4 0 0 1 27  4 0 0 1 28  4 0 0 1 29  4 0 0 1 30  4 0 0 1 31  4 0 0 1 32  
+6 0 0 1 3 1 -1 1 8 0 0 1 6 1 33 1 34  
+6 0 0 1 35 1 36 1 4 0 0 1 37  
+6 0 0 1 38 1 39 1 6 0 0 1 8 1 -1  
+6 0 0 1 40 1 41 1 6 0 0 1 24 1 -1  
+6 0 0 1 40 1 42 1 6 0 0 1 24 1 -1  
+6 0 0 1 43 1 44 1 6 0 0 1 26 1 -1  
+6 0 0 1 43 1 45 1 6 0 0 1 26 1 -1  
+
+prereqs:
+
+prereq-deps:

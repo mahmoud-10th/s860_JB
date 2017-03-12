@@ -1,0 +1,1 @@
+cmd_drivers/media/common/built-in.o :=  /home/mahmoud/prebuilts/gcc/linux-x86/arm/arm-linux-eabi-linaro-4.9/bin/arm-eabi-ld.bfd -EL    -r -o drivers/media/common/built-in.o drivers/media/common/tuners/built-in.o 

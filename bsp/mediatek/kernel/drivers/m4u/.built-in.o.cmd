@@ -1,0 +1,1 @@
+cmd_mediatek/kernel/drivers/m4u/built-in.o :=  /home/mahmoud/prebuilts/gcc/linux-x86/arm/arm-linux-eabi-linaro-4.9/bin/arm-eabi-ld.bfd -EL    -r -o mediatek/kernel/drivers/m4u/built-in.o mediatek/kernel/drivers/m4u/m4u_kernel.o 

@@ -1,0 +1,1 @@
+cmd_drivers/media/rc/built-in.o :=  /home/mahmoud/prebuilts/gcc/linux-x86/arm/arm-linux-eabi-linaro-4.9/bin/arm-eabi-ld.bfd -EL    -r -o drivers/media/rc/built-in.o drivers/media/rc/keymaps/built-in.o 

@@ -1,0 +1,1 @@
+cmd_mediatek/kernel/drivers/almk/almk_driver.o := /home/mahmoud/prebuilts/gcc/linux-x86/arm/arm-linux-eabi-linaro-4.9/bin/arm-eabi-ld.bfd -EL    -r -o mediatek/kernel/drivers/almk/almk_driver.o mediatek/kernel/drivers/almk/almk_drv.o 

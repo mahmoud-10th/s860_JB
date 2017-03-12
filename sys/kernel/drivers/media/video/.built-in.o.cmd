@@ -1,0 +1,1 @@
+cmd_drivers/media/video/built-in.o :=  /home/mahmoud/prebuilts/gcc/linux-x86/arm/arm-linux-eabi-linaro-4.9/bin/arm-eabi-ld.bfd -EL    -r -o drivers/media/video/built-in.o drivers/media/video/davinci/built-in.o 

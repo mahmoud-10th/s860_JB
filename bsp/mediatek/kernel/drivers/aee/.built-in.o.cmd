@@ -1,0 +1,1 @@
+cmd_mediatek/kernel/drivers/aee/built-in.o :=  /home/mahmoud/prebuilts/gcc/linux-x86/arm/arm-linux-eabi-linaro-4.9/bin/arm-eabi-ld.bfd -EL    -r -o mediatek/kernel/drivers/aee/built-in.o mediatek/kernel/drivers/aee/ipanic/built-in.o mediatek/kernel/drivers/aee/common/built-in.o mediatek/kernel/drivers/aee/aed/built-in.o 

@@ -1,0 +1,2078 @@
+mahmoud@serg398-ubuntu:/S860_ROW_OpenSource/sys/kernel$ export ARCH=arm && export ARCH_MTK_PLATFORM=mt6582 && export CROSS_COMPILE=~/prebuilts/gcc/linux-x86/arm/arm-linux-eabi-linaro-4.9/bin/arm-eabi- && TARGET_PRODUCT=lenovo82_wet_jb5 MTK_ROOT_CUSTOM=../mediatek/custom/ MTK_PATH_SOURCE=../mediatek/kernel/ MTK_PATH_PLATFORM=../mediatek/platform/mt6582/kernel/
+mahmoud@serg398-ubuntu:/S860_ROW_OpenSource/sys/kernel$ make
+/S860_ROW_OpenSource/sys/kernel/../mediatek/build/Makefile:13: *** TARGET_PRODUCT/PROJECT is not set.  Stop.
+mahmoud@serg398-ubuntu:/S860_ROW_OpenSource/sys/kernel$ TARGET_PRODUCT=lenovo82_wet_jb5 MTK_ROOT_CUSTOM=../mediatek/custom/ MTK_PATH_SOURCE=../mediatek/kernel/ MTK_PATH_PLATFORM=../mediatek/platform/mt6582/kernel/ ARCH_MTK_PLATFORM=mt6582 && && export CROSS_COMPILE=~/prebuilts/gcc/linux-x86/arm/arm-linux-eabi-linaro-4.9/bin/arm-eabi- make
+bash: syntax error near unexpected token `&&'
+mahmoud@serg398-ubuntu:/S860_ROW_OpenSource/sys/kernel$ TARGET_PRODUCT=lenovo82_wet_jb5 MTK_ROOT_CUSTOM=../mediatek/custom/ MTK_PATH_SOURCE=../mediatek/kernel/ MTK_PATH_PLATFORM=../mediatek/platform/mt6582/kernel/ ARCH_MTK_PLATFORM=mt6582 && export CROSS_COMPILE=~/prebuilts/gcc/linux-x86/arm/arm-linux-eabi-linaro-4.9/bin/arm-eabi- make
+mahmoud@serg398-ubuntu:/S860_ROW_OpenSource/sys/kernel$ TARGET_PRODUCT=lenovo82_wet_jb5 MTK_ROOT_CUSTOM=../mediatek/custom/ MTK_PATH_SOURCE=../mediatek/kernel/ MTK_PATH_PLATFORM=../mediatek/platform/mt6582/kernel/ ARCH_MTK_PLATFORM=mt6582 && export CROSS_COMPILE=~/prebuilts/gcc/linux-x86/arm/arm-linux-eabi-linaro-4.9/bin/arm-eabi-
+mahmoud@serg398-ubuntu:/S860_ROW_OpenSource/sys/kernel$ make
+/S860_ROW_OpenSource/sys/kernel/../mediatek/build/Makefile:13: *** TARGET_PRODUCT/PROJECT is not set.  Stop.
+mahmoud@serg398-ubuntu:/S860_ROW_OpenSource/sys/kernel$ TARGET_PRODUCT=lenovo82_wet_jb5 MTK_ROOT_CUSTOM=../mediatek/custom/ MTK_PATH_SOURCE=../mediatek/kernel/ MTK_PATH_PLATFORM=../mediatek/platform/mt6582/kernel/ ARCH_MTK_PLATFORM=mt6582 make
+
+  CHK     include/linux/version.h
+  CHK     include/generated/utsrelease.h
+make[1]: `include/generated/mach-types.h' is up to date.
+  CC      kernel/bounds.s
+  GEN     include/generated/bounds.h
+  CC      arch/arm/kernel/asm-offsets.s
+  GEN     include/generated/asm-offsets.h
+  CALL    scripts/checksyscalls.sh
+  CC      scripts/mod/empty.o
+  MKELF   scripts/mod/elfconfig.h
+  HOSTCC  scripts/mod/file2alias.o
+  HOSTCC  scripts/mod/modpost.o
+  HOSTCC  scripts/mod/sumversion.o
+  HOSTLD  scripts/mod/modpost
+  CC      init/main.o
+  CHK     include/generated/compile.h
+  UPD     include/generated/compile.h
+  CC      init/version.o
+  CC      init/do_mounts.o
+  CC      init/do_mounts_initrd.o
+  LD      init/mounts.o
+  CC      init/initramfs.o
+  CC      init/calibrate.o
+  LD      init/built-in.o
+  AS      usr/initramfs_data.o
+  LD      usr/built-in.o
+  CC      arch/arm/vfp/vfpmodule.o
+/tmp/ccWj4MPv.s: Assembler messages:
+/tmp/ccWj4MPv.s:185: Warning: register range not in ascending order
+  AS      arch/arm/vfp/entry.o
+  AS      arch/arm/vfp/vfphw.o
+  CC      arch/arm/vfp/vfpsingle.o
+  CC      arch/arm/vfp/vfpdouble.o
+  LD      arch/arm/vfp/vfp.o
+  LD      arch/arm/vfp/built-in.o
+  CC      arch/arm/kernel/elf.o
+  AS      arch/arm/kernel/entry-armv.o
+  AS      arch/arm/kernel/entry-common.o
+  CC      arch/arm/kernel/irq.o
+  CC      arch/arm/kernel/opcodes.o
+  CC      arch/arm/kernel/process.o
+arch/arm/kernel/process.c: In function 'get_wchan':
+arch/arm/kernel/process.c:709:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   int ret = unwind_frame(&frame);
+   ^
+  CC      arch/arm/kernel/ptrace.o
+  CC      arch/arm/kernel/return_address.o
+  CC      arch/arm/kernel/sched_clock.o
+  CC      arch/arm/kernel/setup.o
+  CC      arch/arm/kernel/signal.o
+  CC      arch/arm/kernel/stacktrace.o
+  CC      arch/arm/kernel/sys_arm.o
+  CC      arch/arm/kernel/time.o
+  CC      arch/arm/kernel/traps.o
+  CC      arch/arm/kernel/fiq.o
+  AS      arch/arm/kernel/fiqasm.o
+  CC      arch/arm/kernel/armksyms.o
+  CC      arch/arm/kernel/module.o
+  AS      arch/arm/kernel/sleep.o
+  CC      arch/arm/kernel/suspend.o
+  CC      arch/arm/kernel/smp.o
+  CC      arch/arm/kernel/smp_tlb.o
+  CC      arch/arm/kernel/smp_scu.o
+  CC      arch/arm/kernel/jump_label.o
+  CC      arch/arm/kernel/insn.o
+  CC      arch/arm/kernel/patch.o
+  CC      arch/arm/kernel/kprobes.o
+  CC      arch/arm/kernel/kprobes-common.o
+  CC      arch/arm/kernel/kprobes-arm.o
+  CC      arch/arm/kernel/thumbee.o
+  CC      arch/arm/kernel/kgdb.o
+  CC      arch/arm/kernel/swp_emulate.o
+  CC      arch/arm/kernel/hw_breakpoint.o
+  CC      arch/arm/kernel/pmu.o
+  CC      arch/arm/kernel/perf_event.o
+  CC      arch/arm/kernel/topology.o
+  CC      arch/arm/kernel/io.o
+  LD      arch/arm/kernel/built-in.o
+  AS      arch/arm/kernel/head.o
+  CC      arch/arm/kernel/init_task.o
+  LDS     arch/arm/kernel/vmlinux.lds
+  CC      arch/arm/mm/dma-mapping.o
+  CC      arch/arm/mm/extable.o
+  CC      arch/arm/mm/fault.o
+arch/arm/mm/fault.c: In function '__do_user_fault':
+arch/arm/mm/fault.c:172:9: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'long unsigned int' [-Wformat=]
+         printk("[TRAP] Current,pc:0x%x,tid:0x%x,CP10:0x%x,CP11:0x%x,vfpstate:%x\n",regs->ARM_pc,thread,thread->used_cp[10],thread->used_cp[11],thread->vfpstate);
+         ^
+arch/arm/mm/fault.c:172:9: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'struct thread_info *' [-Wformat=]
+arch/arm/mm/fault.c:172:9: warning: format '%x' expects argument of type 'unsigned int', but argument 6 has type 'union vfp_state' [-Wformat=]
+arch/arm/mm/fault.c:174:9: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'long unsigned int' [-Wformat=]
+         printk("[TRAP] r0:0x%x  r1:0x%x  r2:0x%x  r3:0x%x\n",regs->ARM_r0,regs->ARM_r1,regs->ARM_r2,regs->ARM_r3);
+         ^
+arch/arm/mm/fault.c:174:9: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'long unsigned int' [-Wformat=]
+arch/arm/mm/fault.c:174:9: warning: format '%x' expects argument of type 'unsigned int', but argument 4 has type 'long unsigned int' [-Wformat=]
+arch/arm/mm/fault.c:174:9: warning: format '%x' expects argument of type 'unsigned int', but argument 5 has type 'long unsigned int' [-Wformat=]
+arch/arm/mm/fault.c:175:9: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'long unsigned int' [-Wformat=]
+         printk("[TRAP] r4:0x%x  r5:0x%x  r6:0x%x  r7:0x%x\n",regs->ARM_r4,regs->ARM_r5,regs->ARM_r6,regs->ARM_r7);
+         ^
+arch/arm/mm/fault.c:175:9: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'long unsigned int' [-Wformat=]
+arch/arm/mm/fault.c:175:9: warning: format '%x' expects argument of type 'unsigned int', but argument 4 has type 'long unsigned int' [-Wformat=]
+arch/arm/mm/fault.c:175:9: warning: format '%x' expects argument of type 'unsigned int', but argument 5 has type 'long unsigned int' [-Wformat=]
+arch/arm/mm/fault.c:176:9: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'long unsigned int' [-Wformat=]
+         printk("[TRAP] r8:0x%x  r9:0x%x r10:0x%x r11:0x%x\n",regs->ARM_r8,regs->ARM_r9,regs->ARM_r10,regs->ARM_fp);
+         ^
+arch/arm/mm/fault.c:176:9: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'long unsigned int' [-Wformat=]
+arch/arm/mm/fault.c:176:9: warning: format '%x' expects argument of type 'unsigned int', but argument 4 has type 'long unsigned int' [-Wformat=]
+arch/arm/mm/fault.c:176:9: warning: format '%x' expects argument of type 'unsigned int', but argument 5 has type 'long unsigned int' [-Wformat=]
+arch/arm/mm/fault.c:177:9: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'long unsigned int' [-Wformat=]
+         printk("[TRAP]r12:0x%x r13:0x%x r14:0x%x r15:0x%x\n",regs->ARM_ip,regs->ARM_sp,regs->ARM_lr,regs->ARM_pc);
+         ^
+arch/arm/mm/fault.c:177:9: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'long unsigned int' [-Wformat=]
+arch/arm/mm/fault.c:177:9: warning: format '%x' expects argument of type 'unsigned int', but argument 4 has type 'long unsigned int' [-Wformat=]
+arch/arm/mm/fault.c:177:9: warning: format '%x' expects argument of type 'unsigned int', but argument 5 has type 'long unsigned int' [-Wformat=]
+arch/arm/mm/fault.c:200:25: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'long unsigned int' [-Wformat=]
+                         printk("[TRAP] fixup new PC:0x%x, count:%d\n",regs->ARM_pc,count);
+                         ^
+  CC      arch/arm/mm/init.o
+  CC      arch/arm/mm/iomap.o
+  CC      arch/arm/mm/fault-armv.o
+  CC      arch/arm/mm/flush.o
+  CC      arch/arm/mm/idmap.o
+  CC      arch/arm/mm/ioremap.o
+  CC      arch/arm/mm/mmap.o
+  CC      arch/arm/mm/pgd.o
+  CC      arch/arm/mm/mmu.o
+  CC      arch/arm/mm/vmregion.o
+  CC      arch/arm/mm/proc-syms.o
+  CC      arch/arm/mm/alignment.o
+  CC      arch/arm/mm/highmem.o
+  AS      arch/arm/mm/abort-ev7.o
+  AS      arch/arm/mm/pabort-v7.o
+  AS      arch/arm/mm/cache-v7.o
+  CC      arch/arm/mm/copypage-v6.o
+  CC      arch/arm/mm/context.o
+  AS      arch/arm/mm/tlb-v7.o
+  AS      arch/arm/mm/proc-v7.o
+  LD      arch/arm/mm/built-in.o
+  CC      arch/arm/common/gic.o
+  AS      arch/arm/common/fiq_glue.o
+  CC      arch/arm/common/fiq_glue_setup.o
+  CC      arch/arm/common/fiq_debugger.o
+  LD      arch/arm/common/built-in.o
+  LD      arch/arm/net/built-in.o
+  CC      mediatek/platform/mt6582/kernel/core/core.o
+  CC      mediatek/platform/mt6582/kernel/core/irq.o
+  CC      mediatek/platform/mt6582/kernel/core/timer.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_dbg.o
+  CC      mediatek/platform/mt6582/kernel/core/dram_overclock.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_devs.o
+In file included from mediatek/platform/mt6582/kernel/core/mt_devs.c:27:0:
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:16:9: warning: excess elements in array initializer
+         "MD1_SMEM_SIZE",
+         ^
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:16:9: warning: (near initialization for 'dfo_boot_default.name')
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:17:9: warning: excess elements in array initializer
+         "MD2_SMEM_SIZE",
+         ^
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:17:9: warning: (near initialization for 'dfo_boot_default.name')
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:18:9: warning: excess elements in array initializer
+         "MTK_MD1_SUPPORT",
+         ^
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:18:9: warning: (near initialization for 'dfo_boot_default.name')
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:19:9: warning: excess elements in array initializer
+         "MTK_MD2_SUPPORT",
+         ^
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:19:9: warning: (near initialization for 'dfo_boot_default.name')
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:20:9: warning: excess elements in array initializer
+         "LCM_FAKE_WIDTH",
+         ^
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:20:9: warning: (near initialization for 'dfo_boot_default.name')
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:22:5: warning: excess elements in array initializer
+     },
+     ^
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:22:5: warning: (near initialization for 'dfo_boot_default.name')
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:34:9: warning: excess elements in array initializer
+         0x00200000,
+         ^
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:34:9: warning: (near initialization for 'dfo_boot_default.value')
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:35:9: warning: excess elements in array initializer
+         0x00200000,
+         ^
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:35:9: warning: (near initialization for 'dfo_boot_default.value')
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:36:9: warning: excess elements in array initializer
+         3,
+         ^
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:36:9: warning: (near initialization for 'dfo_boot_default.value')
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:37:9: warning: excess elements in array initializer
+         4,
+         ^
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:37:9: warning: (near initialization for 'dfo_boot_default.value')
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:38:9: warning: excess elements in array initializer
+         0,
+         ^
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:38:9: warning: (near initialization for 'dfo_boot_default.value')
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:40:5: warning: excess elements in array initializer
+     }
+     ^
+../mediatek/platform/mt6582/kernel/core/include/dfo/dfo_boot_default.h:40:5: warning: (near initialization for 'dfo_boot_default.value')
+  CC      mediatek/platform/mt6582/kernel/core/mt_gpt.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_boot.o
+  CC      mediatek/platform/mt6582/kernel/core/board.o
+  CC      mediatek/platform/mt6582/kernel/core/ca7_timer.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_dma.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_reg_dump.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_pm_init.o
+  CC      mediatek/platform/mt6582/kernel/core/mt-smp.o
+  CC      mediatek/platform/mt6582/kernel/core/hotplug.o
+  AS      mediatek/platform/mt6582/kernel/core/mt-headsmp.o
+  AS      mediatek/platform/mt6582/kernel/core/mt_hotplug.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_hotplug_mechanism.o
+  CC      mediatek/platform/mt6582/kernel/core/eint.o
+mediatek/platform/mt6582/kernel/core/eint.c:1567:1: warning: data definition has no type or storage class
+ EXPORT_SYMBO(mt_eint_registration_threaded);
+ ^
+mediatek/platform/mt6582/kernel/core/eint.c:1567:1: warning: type defaults to 'int' in declaration of 'EXPORT_SYMBO' [-Wimplicit-int]
+mediatek/platform/mt6582/kernel/core/eint.c:1567:1: warning: parameter names (without types) in function declaration
+mediatek/platform/mt6582/kernel/core/eint.c:922:13: warning: 'mt_deint_registration' defined but not used [-Wunused-function]
+ static void mt_deint_registration(unsigned int deint_num, unsigned int flag,
+             ^
+  CC      mediatek/platform/mt6582/kernel/core/mt_freqhopping.o
+  CC      mediatek/platform/mt6582/kernel/core/pmu_v7.o
+  CC      mediatek/platform/mt6582/kernel/core/mon_interface.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_mon.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_emi_bm.o
+  CC      mediatek/platform/mt6582/kernel/core/emi_bwl.o
+  CC      mediatek/platform/mt6582/kernel/core/emi_mpu.o
+  CC      mediatek/platform/mt6582/kernel/core/camera_isp.o
+mediatek/platform/mt6582/kernel/core/camera_isp.c:1289:12: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ static int SeninfOverrunDump()
+            ^
+mediatek/platform/mt6582/kernel/core/camera_isp.c: In function 'SeninfOverrunDump':
+mediatek/platform/mt6582/kernel/core/camera_isp.c:1358:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     static MINT32 debugFlag = 0;
+     ^
+mediatek/platform/mt6582/kernel/core/camera_isp.c:1471:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+mediatek/platform/mt6582/kernel/core/camera_isp.c: In function 'ISPRegDump':
+mediatek/platform/mt6582/kernel/core/camera_isp.c:1477:12: warning: unused variable 'i' [-Wunused-variable]
+     MINT32 i;
+            ^
+mediatek/platform/mt6582/kernel/core/camera_isp.c: In function 'ISPResetPass2':
+mediatek/platform/mt6582/kernel/core/camera_isp.c:1574:55: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+         if(ISP_RD32((void *)ISP_REG_ADDR_CTL_DBG_PORT)&0x11==0x11)
+                                                       ^
+mediatek/platform/mt6582/kernel/core/camera_isp.c: In function 'ISP_Tasklet_SENINF':
+mediatek/platform/mt6582/kernel/core/camera_isp.c:2321:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     MUINT32 i = 0;
+     ^
+mediatek/platform/mt6582/kernel/core/camera_isp.c: At top level:
+mediatek/platform/mt6582/kernel/core/camera_isp.c:3873:15: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ static MINT32 DMAErrHandler()
+               ^
+mediatek/platform/mt6582/kernel/core/camera_isp.c: In function 'DMAErrHandler':
+mediatek/platform/mt6582/kernel/core/camera_isp.c:3878:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  MUINT32 i = 0;
+  ^
+mediatek/platform/mt6582/kernel/core/camera_isp.c:3908:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+mediatek/platform/mt6582/kernel/core/camera_isp.c: In function 'ISP_mmap':
+mediatek/platform/mt6582/kernel/core/camera_isp.c:4618:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  long length = pVma->vm_end - pVma->vm_start;
+  ^
+mediatek/platform/mt6582/kernel/core/camera_isp.c:4629:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   MUINT32 pfn=pVma->vm_pgoff<<PAGE_SHIFT;//page from number, physical address of kernel memory
+   ^
+  CC      mediatek/platform/mt6582/kernel/core/camera_sysram.o
+mediatek/platform/mt6582/kernel/core/camera_sysram.c: In function 'SYSRAM_mmap':
+mediatek/platform/mt6582/kernel/core/camera_sysram.c:920:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  long length = pVma->vm_end - pVma->vm_start;
+  ^
+  CC      mediatek/platform/mt6582/kernel/core/camera_pipe_mgr.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_pm_ldo.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_l2c.o
+  CC      mediatek/platform/mt6582/kernel/core/innercache.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_cirq.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_spm.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_spm_sleep.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_spm_mtcmos.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_sleep.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_cpufreq.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_cpu_ss.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_emifreq.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_dormant.o
+  AS      mediatek/platform/mt6582/kernel/core/cpu_dormant.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_dcm.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_idle.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_clkmgr_common.o
+  CC      mediatek/platform/mt6582/kernel/core/mt_clkmgr.o
+  CC      mediatek/platform/mt6582/kernel/core/sbchk_base.o
+  CC      mediatek/platform/mt6582/kernel/core/sec_osal.o
+  CC      mediatek/platform/mt6582/kernel/core/mtk_ccci_helper.o
+mediatek/platform/mt6582/kernel/core/mtk_ccci_helper.c: In function 'internal_md_power_down':
+mediatek/platform/mt6582/kernel/core/mtk_ccci_helper.c:120:10: warning: passing argument 1 of '__arm_iounmap' makes pointer from integer without a cast
+  iounmap(md_topsm_base);
+          ^
+In file included from include/linux/scatterlist.h:10:0,
+                 from include/linux/kfifo.h:56,
+                 from mediatek/platform/mt6582/kernel/core/mtk_ccci_helper.c:9:
+/S860_ROW_OpenSource/sys/kernel/arch/arm/include/asm/io.h:85:13: note: expected 'volatile void *' but argument is of type 'unsigned int'
+ extern void __arm_iounmap(volatile void __iomem *addr);
+             ^
+mediatek/platform/mt6582/kernel/core/mtk_ccci_helper.c:121:10: warning: passing argument 1 of '__arm_iounmap' makes pointer from integer without a cast
+  iounmap(modem2g_topsm_base);
+          ^
+In file included from include/linux/scatterlist.h:10:0,
+                 from include/linux/kfifo.h:56,
+                 from mediatek/platform/mt6582/kernel/core/mtk_ccci_helper.c:9:
+/S860_ROW_OpenSource/sys/kernel/arch/arm/include/asm/io.h:85:13: note: expected 'volatile void *' but argument is of type 'unsigned int'
+ extern void __arm_iounmap(volatile void __iomem *addr);
+             ^
+mediatek/platform/mt6582/kernel/core/mtk_ccci_helper.c:122:10: warning: passing argument 1 of '__arm_iounmap' makes pointer from integer without a cast
+  iounmap(tdd_base);
+          ^
+In file included from include/linux/scatterlist.h:10:0,
+                 from include/linux/kfifo.h:56,
+                 from mediatek/platform/mt6582/kernel/core/mtk_ccci_helper.c:9:
+/S860_ROW_OpenSource/sys/kernel/arch/arm/include/asm/io.h:85:13: note: expected 'volatile void *' but argument is of type 'unsigned int'
+ extern void __arm_iounmap(volatile void __iomem *addr);
+             ^
+  CC      mediatek/platform/mt6582/kernel/core/mt_ptp.o
+  CC      mediatek/platform/mt6582/kernel/core/mssv.o
+  CC      mediatek/platform/mt6582/kernel/core/cpu_hibernate.o
+  AS      mediatek/platform/mt6582/kernel/core/swsusp.o
+  LD      mediatek/platform/mt6582/kernel/core/built-in.o
+  CC      kernel/fork.o
+  CC      kernel/exec_domain.o
+  CC      kernel/panic.o
+  CC      kernel/printk.o
+kernel/printk.c: In function 'console_unlock':
+kernel/printk.c:1522:30: warning: 'org_loglevel' may be used uninitialized in this function [-Wmaybe-uninitialized]
+             console_loglevel = org_loglevel;
+                              ^
+kernel/printk.c:1523:20: warning: 't1' may be used uninitialized in this function [-Wmaybe-uninitialized]
+             if (t2 - t1 > 100000000) {
+                    ^
+  CC      kernel/cpu.o
+  CC      kernel/exit.o
+  CC      kernel/itimer.o
+  CC      kernel/time.o
+  CC      kernel/softirq.o
+  CC      kernel/resource.o
+  CC      kernel/sysctl.o
+  CC      kernel/sysctl_binary.o
+  CC      kernel/capability.o
+  CC      kernel/ptrace.o
+  CC      kernel/timer.o
+  CC      kernel/user.o
+  CC      kernel/signal.o
+  CC      kernel/sys.o
+  CC      kernel/kmod.o
+  CC      kernel/workqueue.o
+  CC      kernel/pid.o
+  CC      kernel/rcupdate.o
+  CC      kernel/extable.o
+  CC      kernel/params.o
+  CC      kernel/posix-timers.o
+  CC      kernel/kthread.o
+  CC      kernel/wait.o
+  CC      kernel/kfifo.o
+  CC      kernel/sys_ni.o
+  CC      kernel/posix-cpu-timers.o
+  CC      kernel/mutex.o
+  CC      kernel/hrtimer.o
+  CC      kernel/rwsem.o
+  CC      kernel/nsproxy.o
+  CC      kernel/srcu.o
+  CC      kernel/semaphore.o
+  CC      kernel/notifier.o
+  CC      kernel/ksysfs.o
+  CC      kernel/cred.o
+  CC      kernel/async.o
+  CC      kernel/range.o
+  CC      kernel/groups.o
+  CC      kernel/debug/debug_core.o
+  CC      kernel/debug/gdbstub.o
+  CC      kernel/debug/kdb/kdb_io.o
+  CC      kernel/debug/kdb/kdb_main.o
+  CC      kernel/debug/kdb/kdb_support.o
+  CC      kernel/debug/kdb/kdb_bt.o
+  CC      kernel/debug/kdb/gen-kdb_cmds.o
+  CC      kernel/debug/kdb/kdb_bp.o
+  CC      kernel/debug/kdb/kdb_debugger.o
+  LD      kernel/debug/kdb/built-in.o
+  LD      kernel/debug/built-in.o
+  CC      kernel/events/core.o
+  CC      kernel/events/ring_buffer.o
+  CC      kernel/events/callchain.o
+  CC      kernel/events/hw_breakpoint.o
+  LD      kernel/events/built-in.o
+  CC      kernel/irq/irqdesc.o
+  CC      kernel/irq/handle.o
+  CC      kernel/irq/manage.o
+  CC      kernel/irq/spurious.o
+  CC      kernel/irq/resend.o
+  CC      kernel/irq/chip.o
+  CC      kernel/irq/dummychip.o
+  CC      kernel/irq/devres.o
+  CC      kernel/irq/autoprobe.o
+  CC      kernel/irq/irqdomain.o
+  CC      kernel/irq/proc.o
+  CC      kernel/irq/pm.o
+  LD      kernel/irq/built-in.o
+  CC      kernel/power/tuxonice_builtin.o
+  CC      kernel/power/tuxonice_bio_core.o
+  CC      kernel/power/tuxonice_bio_chains.o
+  CC      kernel/power/tuxonice_bio_signature.o
+kernel/power/tuxonice_bio_signature.c: In function 'remove_old_signature':
+kernel/power/tuxonice_bio_signature.c:187:10: warning: argument to 'sizeof' in 'memcpy' call is the same pointer type 'char *' as the destination; expected 'char' or an explicit length [-Wsizeof-pointer-memaccess]
+    sizeof(no_image_signature_contents));
+          ^
+  CC      kernel/power/tuxonice_modules.o
+  CC      kernel/power/tuxonice_alloc.o
+  CC      kernel/power/tuxonice_sysfs.o
+  CC      kernel/power/tuxonice_highlevel.o
+  CC      kernel/power/tuxonice_io.o
+  CC      kernel/power/tuxonice_pagedir.o
+  CC      kernel/power/tuxonice_prepare_image.o
+  CC      kernel/power/tuxonice_extent.o
+  CC      kernel/power/tuxonice_pageflags.o
+  CC      kernel/power/tuxonice_ui.o
+  CC      kernel/power/tuxonice_power_off.o
+  CC      kernel/power/tuxonice_atomic_copy.o
+  CC      kernel/power/tuxonice_storage.o
+  CC      kernel/power/tuxonice_netlink.o
+  LD      kernel/power/tuxonice_core.o
+  CC      kernel/power/tuxonice_compress.o
+  LD      kernel/power/tuxonice_bio.o
+  CC      kernel/power/tuxonice_swap.o
+  CC      kernel/power/tuxonice_file.o
+  CC      kernel/power/qos.o
+  CC      kernel/power/main.o
+  CC      kernel/power/process.o
+  CC      kernel/power/suspend.o
+  CC      kernel/power/suspend_test.o
+  CC      kernel/power/hibernate.o
+  CC      kernel/power/snapshot.o
+  CC      kernel/power/swap.o
+  CC      kernel/power/user.o
+  CC      kernel/power/block_io.o
+  CC      kernel/power/earlysuspend.o
+  CC      kernel/power/autosleep.o
+  CC      kernel/power/fbearlysuspend.o
+  CC      kernel/power/wakelock.o
+  CC      kernel/power/poweroff.o
+  LD      kernel/power/built-in.o
+  CC      kernel/sched/core.o
+  CC      kernel/sched/clock.o
+  CC      kernel/sched/idle_task.o
+  CC      kernel/sched/fair.o
+  CC      kernel/sched/rt.o
+  CC      kernel/sched/stop_task.o
+  CC      kernel/sched/cpupri.o
+  CC      kernel/sched/stats.o
+  CC      kernel/sched/debug.o
+  LD      kernel/sched/built-in.o
+  CC      kernel/time/timekeeping.o
+  CC      kernel/time/ntp.o
+  CC      kernel/time/clocksource.o
+  CC      kernel/time/jiffies.o
+  CC      kernel/time/timer_list.o
+  CC      kernel/time/timecompare.o
+  CC      kernel/time/timeconv.o
+  CC      kernel/time/posix-clock.o
+  CC      kernel/time/alarmtimer.o
+  CC      kernel/time/clockevents.o
+  CC      kernel/time/tick-common.o
+  CC      kernel/time/tick-broadcast.o
+  CC      kernel/time/tick-oneshot.o
+  CC      kernel/time/tick-sched.o
+  LD      kernel/time/built-in.o
+  CC      kernel/trace/trace_clock.o
+  CC      kernel/trace/ring_buffer.o
+  CC      kernel/trace/trace.o
+  CC      kernel/trace/trace_output.o
+  CC      kernel/trace/trace_stat.o
+  CC      kernel/trace/trace_printk.o
+  CC      kernel/trace/trace_sched_switch.o
+  CC      kernel/trace/trace_nop.o
+  CC      kernel/trace/blktrace.o
+  CC      kernel/trace/trace_events.o
+  CC      kernel/trace/trace_export.o
+  CC      kernel/trace/trace_event_perf.o
+  CC      kernel/trace/trace_events_filter.o
+  CC      kernel/trace/power-traces.o
+  CC      kernel/trace/trace_kdb.o
+  LD      kernel/trace/built-in.o
+  CC      kernel/freezer.o
+  CC      kernel/profile.o
+  CC      kernel/stacktrace.o
+  CC      kernel/mutex-debug.o
+  CC      kernel/lockdep.o
+kernel/lockdep.c: In function '__bfs':
+kernel/lockdep.c:1036:17: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'struct lock_list *' [-Wformat=]
+                 printk("=======\nlocklist entry is NULL, 0x%x\n=======\n",entry);
+                 ^
+  CC      kernel/lockdep_proc.o
+  CC      kernel/futex.o
+  CC      kernel/rtmutex.o
+  CC      kernel/smp.o
+  CC      kernel/spinlock.o
+  CC      kernel/uid16.o
+  CC      kernel/module.o
+  CC      kernel/kallsyms.o
+  CC      kernel/cgroup.o
+  CHK     kernel/config_data.h
+  CC      kernel/configs.o
+  CC      kernel/stop_machine.o
+  CC      kernel/kprobes.o
+  CC      kernel/rcutree.o
+  CC      kernel/utsname_sysctl.o
+  CC      kernel/tracepoint.o
+  CC      kernel/elfcore.o
+  CC      kernel/irq_work.o
+  CC      kernel/cpu_pm.o
+  CC      kernel/jump_label.o
+  LD      kernel/built-in.o
+  CC      mm/filemap.o
+  CC      mm/mempool.o
+  CC      mm/oom_kill.o
+  CC      mm/fadvise.o
+  CC      mm/maccess.o
+  CC      mm/page_alloc.o
+  CC      mm/page-writeback.o
+  CC      mm/readahead.o
+  CC      mm/swap.o
+  CC      mm/truncate.o
+  CC      mm/vmscan.o
+  CC      mm/shmem.o
+  CC      mm/prio_tree.o
+  CC      mm/util.o
+  CC      mm/mmzone.o
+  CC      mm/vmstat.o
+  CC      mm/backing-dev.o
+  CC      mm/page_isolation.o
+  CC      mm/mm_init.o
+  CC      mm/mmu_context.o
+  CC      mm/percpu.o
+  CC      mm/fremap.o
+  CC      mm/highmem.o
+  CC      mm/madvise.o
+  CC      mm/memory.o
+  CC      mm/mincore.o
+  CC      mm/mlock.o
+  CC      mm/mmap.o
+  CC      mm/mprotect.o
+  CC      mm/mremap.o
+  CC      mm/msync.o
+  CC      mm/rmap.o
+  CC      mm/vmalloc.o
+  CC      mm/pagewalk.o
+  CC      mm/pgtable-generic.o
+  CC      mm/process_vm_access.o
+  CC      mm/init-mm.o
+  CC      mm/bootmem.o
+  CC      mm/memblock.o
+  CC      mm/bounce.o
+  CC      mm/page_io.o
+  CC      mm/swap_state.o
+  CC      mm/swapfile.o
+  CC      mm/thrash.o
+  CC      mm/dmapool.o
+  CC      mm/slub.o
+  LD      mm/built-in.o
+  CC      fs/open.o
+  CC      fs/read_write.o
+  CC      fs/file_table.o
+  CC      fs/super.o
+  CC      fs/char_dev.o
+  CC      fs/stat.o
+  CC      fs/exec.o
+fs/exec.c: In function 'do_execve':
+fs/exec.c:1570:9: warning: 'argv0' may be used uninitialized in this function [-Wmaybe-uninitialized]
+         printk("[exec done] argv[0] = 0x%x\n", argv0);
+         ^
+fs/exec.c:1483:9: note: 'argv0' was declared here
+     int argv0;
+         ^
+  CC      fs/pipe.o
+  CC      fs/namei.o
+  CC      fs/fcntl.o
+  CC      fs/ioctl.o
+  CC      fs/readdir.o
+  CC      fs/select.o
+  CC      fs/fifo.o
+  CC      fs/dcache.o
+  CC      fs/inode.o
+  CC      fs/attr.o
+  CC      fs/bad_inode.o
+  CC      fs/file.o
+  CC      fs/filesystems.o
+  CC      fs/namespace.o
+fs/namespace.c: In function 'sys_mount':
+fs/namespace.c:2613:6: warning: 'kernel_dev' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  ret = do_mount(kernel_dev, kernel_dir, kernel_type, flags,
+      ^
+fs/namespace.c:2613:6: warning: 'kernel_type' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  CC      fs/seq_file.o
+  CC      fs/xattr.o
+  CC      fs/libfs.o
+  CC      fs/fs-writeback.o
+  CC      fs/pnode.o
+  CC      fs/drop_caches.o
+  CC      fs/splice.o
+  CC      fs/sync.o
+  CC      fs/utimes.o
+  CC      fs/stack.o
+  CC      fs/fs_struct.o
+  CC      fs/statfs.o
+  CC      fs/buffer.o
+  CC      fs/bio.o
+  CC      fs/block_dev.o
+  CC      fs/direct-io.o
+  CC      fs/mpage.o
+  CC      fs/ioprio.o
+  CC      fs/proc_namespace.o
+  CC      fs/debugfs/inode.o
+  CC      fs/debugfs/file.o
+  LD      fs/debugfs/debugfs.o
+  LD      fs/debugfs/built-in.o
+  CC      fs/devpts/inode.o
+  LD      fs/devpts/devpts.o
+  LD      fs/devpts/built-in.o
+  LD      fs/exofs/built-in.o
+  CC      fs/ext3/balloc.o
+  CC      fs/ext3/bitmap.o
+  CC      fs/ext3/dir.o
+  CC      fs/ext3/file.o
+  CC      fs/ext3/fsync.o
+  CC      fs/ext3/ialloc.o
+  CC      fs/ext3/inode.o
+  CC      fs/ext3/ioctl.o
+  CC      fs/ext3/namei.o
+  CC      fs/ext3/super.o
+  CC      fs/ext3/symlink.o
+  CC      fs/ext3/hash.o
+  CC      fs/ext3/resize.o
+  CC      fs/ext3/ext3_jbd.o
+  CC      fs/ext3/xattr.o
+  CC      fs/ext3/xattr_user.o
+  CC      fs/ext3/xattr_trusted.o
+  CC      fs/ext3/acl.o
+  LD      fs/ext3/ext3.o
+  LD      fs/ext3/built-in.o
+  CC      fs/ext4/balloc.o
+  CC      fs/ext4/bitmap.o
+  CC      fs/ext4/dir.o
+  CC      fs/ext4/file.o
+  CC      fs/ext4/fsync.o
+  CC      fs/ext4/ialloc.o
+  CC      fs/ext4/inode.o
+  CC      fs/ext4/page-io.o
+  CC      fs/ext4/ioctl.o
+  CC      fs/ext4/namei.o
+  CC      fs/ext4/super.o
+  CC      fs/ext4/symlink.o
+  CC      fs/ext4/hash.o
+  CC      fs/ext4/resize.o
+  CC      fs/ext4/extents.o
+  CC      fs/ext4/ext4_jbd2.o
+  CC      fs/ext4/migrate.o
+  CC      fs/ext4/mballoc.o
+  CC      fs/ext4/block_validity.o
+  CC      fs/ext4/move_extent.o
+  CC      fs/ext4/mmp.o
+  CC      fs/ext4/indirect.o
+  CC      fs/ext4/xattr.o
+  CC      fs/ext4/xattr_user.o
+  CC      fs/ext4/xattr_trusted.o
+  LD      fs/ext4/ext4.o
+  LD      fs/ext4/built-in.o
+  CC      fs/fat/cache.o
+  CC      fs/fat/dir.o
+  CC      fs/fat/fatent.o
+  CC      fs/fat/file.o
+  CC      fs/fat/inode.o
+  CC      fs/fat/misc.o
+  CC      fs/fat/namei_msdos.o
+  CC      fs/fat/namei_vfat.o
+  LD      fs/fat/fat.o
+  LD      fs/fat/vfat.o
+  LD      fs/fat/msdos.o
+  LD      fs/fat/built-in.o
+  CC      fs/fuse/dev.o
+  CC      fs/fuse/dir.o
+  CC      fs/fuse/file.o
+  CC      fs/fuse/inode.o
+  CC      fs/fuse/control.o
+  LD      fs/fuse/fuse.o
+  LD      fs/fuse/built-in.o
+  CC      fs/isofs/namei.o
+  CC      fs/isofs/inode.o
+  CC      fs/isofs/dir.o
+  CC      fs/isofs/util.o
+  CC      fs/isofs/rock.o
+  CC      fs/isofs/export.o
+  CC      fs/isofs/joliet.o
+  CC      fs/isofs/compress.o
+  LD      fs/isofs/isofs.o
+  LD      fs/isofs/built-in.o
+  CC      fs/jbd/transaction.o
+  CC      fs/jbd/commit.o
+  CC      fs/jbd/recovery.o
+  CC      fs/jbd/checkpoint.o
+  CC      fs/jbd/revoke.o
+  CC      fs/jbd/journal.o
+  LD      fs/jbd/jbd.o
+  LD      fs/jbd/built-in.o
+  CC      fs/jbd2/transaction.o
+  CC      fs/jbd2/commit.o
+  CC      fs/jbd2/recovery.o
+  CC      fs/jbd2/checkpoint.o
+  CC      fs/jbd2/revoke.o
+  CC      fs/jbd2/journal.o
+  LD      fs/jbd2/jbd2.o
+  LD      fs/jbd2/built-in.o
+  CC      fs/nls/nls_base.o
+  CC      fs/nls/nls_cp437.o
+  CC      fs/nls/nls_cp950.o
+  CC      fs/nls/nls_ascii.o
+  CC      fs/nls/nls_iso8859-1.o
+  CC      fs/nls/nls_utf8.o
+  LD      fs/nls/built-in.o
+  CC      fs/notify/fsnotify.o
+  CC      fs/notify/notification.o
+  CC      fs/notify/group.o
+  CC      fs/notify/inode_mark.o
+  CC      fs/notify/mark.o
+  CC      fs/notify/vfsmount_mark.o
+  CC      fs/notify/dnotify/dnotify.o
+  LD      fs/notify/dnotify/built-in.o
+  LD      fs/notify/fanotify/built-in.o
+  CC      fs/notify/inotify/inotify_fsnotify.o
+  CC      fs/notify/inotify/inotify_user.o
+  LD      fs/notify/inotify/built-in.o
+  LD      fs/notify/built-in.o
+  CC      fs/proc/mmu.o
+  CC      fs/proc/task_mmu.o
+fs/proc/task_mmu.c:557:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ extern void swap_info_unlock();
+ ^
+  CC      fs/proc/inode.o
+  CC      fs/proc/root.o
+  CC      fs/proc/base.o
+  CC      fs/proc/generic.o
+  CC      fs/proc/array.o
+  CC      fs/proc/proc_tty.o
+  CC      fs/proc/cmdline.o
+  CC      fs/proc/consoles.o
+  CC      fs/proc/cpuinfo.o
+  CC      fs/proc/devices.o
+  CC      fs/proc/interrupts.o
+  CC      fs/proc/loadavg.o
+  CC      fs/proc/meminfo.o
+fs/proc/meminfo.c:26:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ int extra_log_meminfo_lite()
+     ^
+  CC      fs/proc/stat.o
+  CC      fs/proc/uptime.o
+  CC      fs/proc/version.o
+  CC      fs/proc/softirqs.o
+  CC      fs/proc/namespaces.o
+  CC      fs/proc/proc_sysctl.o
+  CC      fs/proc/proc_net.o
+  CC      fs/proc/kmsg.o
+  CC      fs/proc/page.o
+fs/proc/page.c:76:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ extern void swap_info_unlock();
+ ^
+  LD      fs/proc/proc.o
+  LD      fs/proc/built-in.o
+  CC      fs/quota/dquot.o
+  CC      fs/quota/quota_v2.o
+  CC      fs/quota/quota_tree.o
+  CC      fs/quota/quota.o
+  LD      fs/quota/built-in.o
+  CC      fs/ramfs/inode.o
+  CC      fs/ramfs/file-mmu.o
+  LD      fs/ramfs/ramfs.o
+  LD      fs/ramfs/built-in.o
+  CC      fs/sysfs/inode.o
+  CC      fs/sysfs/file.o
+  CC      fs/sysfs/dir.o
+  CC      fs/sysfs/symlink.o
+  CC      fs/sysfs/mount.o
+  CC      fs/sysfs/bin.o
+  CC      fs/sysfs/group.o
+  LD      fs/sysfs/built-in.o
+  CC      fs/eventpoll.o
+  CC      fs/anon_inodes.o
+  CC      fs/signalfd.o
+  CC      fs/timerfd.o
+  CC      fs/eventfd.o
+  CC      fs/aio.o
+  CC      fs/locks.o
+  CC      fs/binfmt_script.o
+  CC      fs/binfmt_elf.o
+  CC      fs/mbcache.o
+  CC      fs/posix_acl.o
+  CC      fs/xattr_acl.o
+  CC      fs/dcookies.o
+  LD      fs/built-in.o
+  CC [M]  fs/lowmemorydetect.o
+fs/lowmemorydetect.c: In function 'isCanWrite':
+fs/lowmemorydetect.c:75:20: warning: unused variable 'writepetr' [-Wunused-variable]
+         int i = 0, writepetr = 0;
+                    ^
+fs/lowmemorydetect.c: In function 'lowmemdetect_init':
+fs/lowmemorydetect.c:176:32: warning: assignment discards 'const' qualifier from pointer target type
+         lenovo_file_operations = myfile->f_op;    //it point to ext4_file_operations
+                                ^
+In file included from include/linux/module.h:17:0,
+                 from fs/lowmemorydetect.c:2:
+fs/lowmemorydetect.c: In function '__check_original_file_writeP':
+include/linux/moduleparam.h:339:45: warning: return from incompatible pointer type
+  static inline type *__check_##name(void) { return(p); }
+                                             ^
+include/linux/moduleparam.h:359:34: note: in expansion of macro '__param_check'
+ #define param_check_int(name, p) __param_check(name, p, int)
+                                  ^
+include/linux/moduleparam.h:118:2: note: in expansion of macro 'param_check_int'
+  param_check_##type(name, &(value));       \
+  ^
+fs/lowmemorydetect.c:199:1: note: in expansion of macro 'module_param_named'
+ module_param_named(original_file_writeP, original_file_operations.write, int, S_IRUGO | S_IWUSR);
+ ^
+  LD      ipc/built-in.o
+  CC      security/commoncap.o
+  CC      security/min_addr.o
+  LD      security/built-in.o
+  CC      crypto/api.o
+  CC      crypto/cipher.o
+  CC      crypto/compress.o
+  CC      crypto/algapi.o
+  CC      crypto/scatterwalk.o
+  CC      crypto/proc.o
+  CC      crypto/ablkcipher.o
+  CC      crypto/blkcipher.o
+  CC      crypto/ahash.o
+  CC      crypto/shash.o
+  CC      crypto/algboss.o
+  CC      crypto/testmgr.o
+  LD      crypto/crypto.o
+  CC      crypto/crypto_wq.o
+  LD      crypto/crypto_algapi.o
+  CC      crypto/aead.o
+  LD      crypto/crypto_blkcipher.o
+  CC      crypto/chainiv.o
+  CC      crypto/eseqiv.o
+  LD      crypto/crypto_hash.o
+  CC      crypto/pcompress.o
+  LD      crypto/cryptomgr.o
+  CC      crypto/hmac.o
+  CC      crypto/md5.o
+  CC      crypto/sha1_generic.o
+  CC      crypto/sha256_generic.o
+  CC      crypto/ecb.o
+  CC      crypto/cbc.o
+  CC      crypto/des_generic.o
+  CC      crypto/twofish_generic.o
+  CC      crypto/twofish_common.o
+  CC      crypto/aes_generic.o
+  CC      crypto/arc4.o
+  CC      crypto/deflate.o
+  CC      crypto/crc32c.o
+  CC      crypto/authenc.o
+  CC      crypto/authencesn.o
+  CC      crypto/lzo.o
+  CC      crypto/rng.o
+  CC      crypto/krng.o
+  LD      crypto/built-in.o
+  CC      block/elevator.o
+  CC      block/blk-core.o
+  CC      block/blk-tag.o
+  CC      block/blk-sysfs.o
+  CC      block/blk-flush.o
+  CC      block/blk-settings.o
+  CC      block/blk-ioc.o
+  CC      block/blk-map.o
+  CC      block/blk-exec.o
+  CC      block/blk-merge.o
+  CC      block/blk-softirq.o
+  CC      block/blk-timeout.o
+  CC      block/blk-iopoll.o
+  CC      block/blk-lib.o
+  CC      block/ioctl.o
+  CC      block/genhd.o
+  CC      block/scsi_ioctl.o
+  CC      block/uuid.o
+  CC      block/partition-generic.o
+  CC      block/partitions/check.o
+  CC      block/partitions/msdos.o
+  LD      block/partitions/built-in.o
+  CC      block/noop-iosched.o
+  CC      block/deadline-iosched.o
+  CC      block/cfq-iosched.o
+  LD      block/built-in.o
+  CC      drivers/amba/bus.o
+  LD      drivers/amba/built-in.o
+  LD      drivers/auxdisplay/built-in.o
+  CC      drivers/base/core.o
+  CC      drivers/base/bus.o
+  CC      drivers/base/dd.o
+  CC      drivers/base/syscore.o
+  CC      drivers/base/driver.o
+  CC      drivers/base/class.o
+  CC      drivers/base/platform.o
+  CC      drivers/base/cpu.o
+  CC      drivers/base/firmware.o
+  CC      drivers/base/init.o
+  CC      drivers/base/map.o
+  CC      drivers/base/devres.o
+  CC      drivers/base/attribute_container.o
+  CC      drivers/base/transport_class.o
+  CC      drivers/base/topology.o
+  CC      drivers/base/power/sysfs.o
+  CC      drivers/base/power/generic_ops.o
+  CC      drivers/base/power/common.o
+  CC      drivers/base/power/qos.o
+  CC      drivers/base/power/main.o
+  CC      drivers/base/power/wakeup.o
+  LD      drivers/base/power/built-in.o
+  CC      drivers/base/dma-mapping.o
+  CC      drivers/base/dma-coherent.o
+  CC      drivers/base/dma-buf.o
+  CC      drivers/base/firmware_class.o
+  CC      drivers/base/module.o
+  CC      drivers/base/sync.o
+  CC      drivers/base/sw_sync.o
+  LD      drivers/base/built-in.o
+  CC      drivers/block/loop.o
+  LD      drivers/block/built-in.o
+  LD      drivers/cdrom/built-in.o
+  CC      drivers/char/mem.o
+  CC      drivers/char/random.o
+  CC      drivers/char/misc.o
+  LD      drivers/char/built-in.o
+  LD      drivers/clk/built-in.o
+  LD      drivers/clocksource/built-in.o
+  CC      drivers/cpufreq/cpufreq.o
+  CC      drivers/cpufreq/cpufreq_stats.o
+  CC      drivers/cpufreq/cpufreq_performance.o
+  CC      drivers/cpufreq/cpufreq_powersave.o
+  CC      drivers/cpufreq/cpufreq_userspace.o
+  CC      drivers/cpufreq/cpufreq_hotplug.o
+  CC      drivers/cpufreq/freq_table.o
+  LD      drivers/cpufreq/built-in.o
+  LD      drivers/crypto/built-in.o
+  LD      drivers/firewire/built-in.o
+  LD      drivers/firmware/built-in.o
+  LD      drivers/gpio/built-in.o
+  LD      drivers/gpu/drm/i2c/built-in.o
+  LD      drivers/gpu/drm/built-in.o
+  CC      drivers/gpu/ion/ion.o
+  CC      drivers/gpu/ion/ion_heap.o
+In file included from include/linux/spinlock.h:55:0,
+                 from include/linux/mmzone.h:7,
+                 from include/linux/gfp.h:4,
+                 from include/linux/mm.h:8,
+                 from drivers/gpu/ion/ion_heap.c:19:
+drivers/gpu/ion/ion_heap.c: In function 'ion_heap_map_user':
+include/linux/kernel.h:560:17: warning: comparison of distinct pointer types lacks a cast
+  (void) (&_min1 == &_min2);  \
+                 ^
+drivers/gpu/ion/ion_heap.c:119:9: note: in expansion of macro 'min'
+   len = min(len, remainder);
+         ^
+include/linux/kernel.h:560:17: warning: comparison of distinct pointer types lacks a cast
+  (void) (&_min1 == &_min2);  \
+                 ^
+drivers/gpu/ion/ion_heap.c:127:21: note: in expansion of macro 'min'
+             addr += min(PAGE_SIZE, len);
+                     ^
+drivers/gpu/ion/ion_heap.c:104:9: warning: unused variable 'j' [-Wunused-variable]
+  int i, j;
+         ^
+  CC      drivers/gpu/ion/ion_page_pool.o
+  CC      drivers/gpu/ion/ion_system_heap.o
+  CC      drivers/gpu/ion/ion_carveout_heap.o
+  CC      drivers/gpu/ion/ion_chunk_heap.o
+  CC      drivers/gpu/ion/ion_debug.o
+drivers/gpu/ion/ion_debug.c: In function 'ion_get_inuse_client_record':
+drivers/gpu/ion/ion_debug.c:403:17: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'struct ion_client_usage_record *' [-Wformat=]
+                 printk(ION_DEBUG_INFO "[ion_get_inuse_client_record]return client %x \n",tmp_client);
+                 ^
+drivers/gpu/ion/ion_debug.c: In function 'ion_get_freed_client_record':
+drivers/gpu/ion/ion_debug.c:414:17: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'struct ion_client_usage_record *' [-Wformat=]
+                 printk(ION_DEBUG_INFO "[ion_get_inuse_client_record]return client %x \n",tmp_client);
+                 ^
+drivers/gpu/ion/ion_debug.c: In function 'get_kernel_backtrace':
+drivers/gpu/ion/ion_debug.c:582:4: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'long unsigned int' [-Wformat=]
+    printk(ION_DEBUG_INFO "bactrace[%d] : %x  ",i, trace.entries[i]);
+    ^
+drivers/gpu/ion/ion_debug.c: In function 'create_new_record_into_list':
+drivers/gpu/ion/ion_debug.c:1430:9: warning: unused variable 'task_comm' [-Wunused-variable]
+    char task_comm[TASK_COMM_LEN];
+         ^
+  CC      drivers/gpu/ion/ion_profile.o
+  LD      drivers/gpu/ion/built-in.o
+  LD      drivers/gpu/stub/built-in.o
+  LD      drivers/gpu/vga/built-in.o
+  LD      drivers/gpu/built-in.o
+  CC      drivers/hid/hid-lg.o
+  CC      drivers/hid/hid-debug.o
+  CC      drivers/hid/hid-core.o
+  CC      drivers/hid/hid-input.o
+  LD      drivers/hid/hid.o
+  CC      drivers/hid/hid-a4tech.o
+  CC      drivers/hid/hid-apple.o
+  CC      drivers/hid/hid-belkin.o
+  CC      drivers/hid/hid-cherry.o
+  CC      drivers/hid/hid-chicony.o
+  CC      drivers/hid/hid-cypress.o
+  CC      drivers/hid/hid-dr.o
+  CC      drivers/hid/hid-ezkey.o
+  CC      drivers/hid/hid-gyration.o
+  CC      drivers/hid/hid-kensington.o
+  CC      drivers/hid/hid-kye.o
+  LD      drivers/hid/hid-logitech.o
+  CC      drivers/hid/hid-microsoft.o
+  CC      drivers/hid/hid-monterey.o
+  CC      drivers/hid/hid-ntrig.o
+  CC      drivers/hid/hid-pl.o
+  CC      drivers/hid/hid-petalynx.o
+  CC      drivers/hid/hid-samsung.o
+  CC      drivers/hid/hid-sjoy.o
+  CC      drivers/hid/hid-sony.o
+  CC      drivers/hid/hid-sunplus.o
+  CC      drivers/hid/hid-gaff.o
+  CC      drivers/hid/hid-tmff.o
+  CC      drivers/hid/hid-topseed.o
+  CC      drivers/hid/hid-twinhan.o
+  CC      drivers/hid/hid-zpff.o
+  CC      drivers/hid/usbhid/hid-core.o
+  CC      drivers/hid/usbhid/hid-quirks.o
+  LD      drivers/hid/usbhid/usbhid.o
+  LD      drivers/hid/usbhid/built-in.o
+  LD      drivers/hid/built-in.o
+  CC [M]  drivers/hid/hid-logitech-dj.o
+  LD      drivers/hsi/clients/built-in.o
+  LD      drivers/hsi/built-in.o
+  CC      drivers/i2c/i2c-boardinfo.o
+  CC      drivers/i2c/i2c-core.o
+  LD      drivers/i2c/algos/built-in.o
+  LD      drivers/i2c/busses/built-in.o
+  LD      drivers/i2c/muxes/built-in.o
+  LD      drivers/i2c/built-in.o
+  LD      drivers/idle/built-in.o
+  LD      drivers/ieee802154/built-in.o
+  CC      drivers/input/input.o
+  CC      drivers/input/input-compat.o
+  CC      drivers/input/input-mt.o
+  CC      drivers/input/ff-core.o
+  LD      drivers/input/input-core.o
+  CC      drivers/input/mousedev.o
+  CC      drivers/input/evdev.o
+  LD      drivers/input/keyboard/built-in.o
+  CC      drivers/input/misc/uinput.o
+  LD      drivers/input/misc/built-in.o
+  LD      drivers/input/mouse/built-in.o
+  LD      drivers/input/touchscreen/built-in.o
+  LD      drivers/input/built-in.o
+  CC      drivers/input/serio/serio.o
+  CC      drivers/input/serio/ambakmi.o
+  CC      drivers/input/serio/libps2.o
+  LD      drivers/input/serio/built-in.o
+  LD      drivers/iommu/built-in.o
+  CC      drivers/leds/led-core.o
+  CC      drivers/leds/led-class.o
+  CC      drivers/leds/led-triggers.o
+  CC      drivers/leds/ledtrig-timer.o
+  LD      drivers/leds/built-in.o
+  LD      drivers/lguest/built-in.o
+  LD      drivers/macintosh/built-in.o
+  CC      drivers/md/dm-uevent.o
+  CC      drivers/md/dm.o
+  CC      drivers/md/dm-table.o
+  CC      drivers/md/dm-target.o
+  CC      drivers/md/dm-linear.o
+  CC      drivers/md/dm-stripe.o
+  CC      drivers/md/dm-ioctl.o
+  CC      drivers/md/dm-io.o
+  CC      drivers/md/dm-kcopyd.o
+  CC      drivers/md/dm-sysfs.o
+  LD      drivers/md/dm-mod.o
+  CC      drivers/md/dm-crypt.o
+  LD      drivers/md/built-in.o
+  LD      drivers/media/common/tuners/built-in.o
+  LD      drivers/media/common/built-in.o
+  LD      drivers/media/rc/keymaps/built-in.o
+  LD      drivers/media/rc/built-in.o
+  LD      drivers/media/video/davinci/built-in.o
+  LD      drivers/media/video/built-in.o
+  LD      drivers/media/built-in.o
+  LD      drivers/mfd/built-in.o
+  CC      drivers/misc/pmem.o
+  CC      drivers/misc/uid_stat.o
+  LD      drivers/misc/carma/built-in.o
+  LD      drivers/misc/cb710/built-in.o
+  LD      drivers/misc/eeprom/built-in.o
+  LD      drivers/misc/lis3lv02d/built-in.o
+  LD      drivers/misc/ti-st/built-in.o
+  LD      drivers/misc/built-in.o
+  CC      drivers/mmc/card/block.o
+  CC      drivers/mmc/card/queue.o
+  LD      drivers/mmc/card/mmc_block.o
+  LD      drivers/mmc/card/built-in.o
+  CC      drivers/mmc/core/core.o
+  CC      drivers/mmc/core/bus.o
+  CC      drivers/mmc/core/host.o
+  CC      drivers/mmc/core/mmc.o
+  CC      drivers/mmc/core/mmc_ops.o
+  CC      drivers/mmc/core/sd.o
+  CC      drivers/mmc/core/sd_ops.o
+  CC      drivers/mmc/core/sdio.o
+  CC      drivers/mmc/core/sdio_ops.o
+  CC      drivers/mmc/core/sdio_bus.o
+  CC      drivers/mmc/core/sdio_cis.o
+  CC      drivers/mmc/core/sdio_io.o
+  CC      drivers/mmc/core/sdio_irq.o
+  CC      drivers/mmc/core/quirks.o
+  CC      drivers/mmc/core/cd-gpio.o
+  CC      drivers/mmc/core/debugfs.o
+  LD      drivers/mmc/core/mmc_core.o
+  LD      drivers/mmc/core/built-in.o
+  LD      drivers/mmc/host/built-in.o
+  LD      drivers/mmc/built-in.o
+  CC      drivers/mtd/mtdcore.o
+  CC      drivers/mtd/mtdsuper.o
+  CC      drivers/mtd/mtdconcat.o
+  CC      drivers/mtd/mtdpart.o
+  LD      drivers/mtd/mtd.o
+  CC      drivers/mtd/mtdchar.o
+  CC      drivers/mtd/mtd_blkdevs.o
+  CC      drivers/mtd/mtdblock.o
+  CC      drivers/mtd/chips/chipreg.o
+  LD      drivers/mtd/chips/built-in.o
+  LD      drivers/mtd/devices/built-in.o
+  LD      drivers/mtd/lpddr/built-in.o
+  LD      drivers/mtd/maps/built-in.o
+  CC      drivers/mtd/nand/nand_base.o
+  CC      drivers/mtd/nand/nand_bbt.o
+  LD      drivers/mtd/nand/nand.o
+  CC      drivers/mtd/nand/nand_ecc.o
+  CC      drivers/mtd/nand/nand_ids.o
+  CC      drivers/mtd/nand/plat_nand.o
+  LD      drivers/mtd/nand/built-in.o
+  LD      drivers/mtd/onenand/built-in.o
+  LD      drivers/mtd/tests/built-in.o
+  LD      drivers/mtd/built-in.o
+  CC      drivers/net/ifb.o
+  CC      drivers/net/Space.o
+  CC      drivers/net/loopback.o
+  CC      drivers/net/tun.o
+  CC      drivers/net/ppp/ppp_generic.o
+  CC      drivers/net/ppp/ppp_async.o
+  CC      drivers/net/ppp/bsd_comp.o
+  CC      drivers/net/ppp/ppp_deflate.o
+  CC      drivers/net/ppp/ppp_mppe.o
+  CC      drivers/net/ppp/ppp_synctty.o
+  CC      drivers/net/ppp/pppox.o
+  CC      drivers/net/ppp/pppoe.o
+  CC      drivers/net/ppp/pppolac.o
+  CC      drivers/net/ppp/pppopns.o
+  LD      drivers/net/ppp/built-in.o
+  CC      drivers/net/slip/slhc.o
+  LD      drivers/net/slip/built-in.o
+  LD      drivers/net/wireless/built-in.o
+  LD      drivers/net/built-in.o
+  LD      drivers/nfc/built-in.o
+  LD      drivers/pinctrl/built-in.o
+  LD      drivers/platform/built-in.o
+  CC      drivers/power/power_supply_core.o
+  CC      drivers/power/power_supply_sysfs.o
+  CC      drivers/power/power_supply_leds.o
+  LD      drivers/power/power_supply.o
+  LD      drivers/power/built-in.o
+  CC      drivers/rtc/rtc-lib.o
+  CC      drivers/rtc/hctosys.o
+  CC      drivers/rtc/class.o
+  CC      drivers/rtc/interface.o
+  CC      drivers/rtc/rtc-dev.o
+  CC      drivers/rtc/rtc-proc.o
+  CC      drivers/rtc/rtc-sysfs.o
+  LD      drivers/rtc/rtc-core.o
+  LD      drivers/rtc/built-in.o
+  CC      drivers/scsi/scsi.o
+  CC      drivers/scsi/hosts.o
+  CC      drivers/scsi/scsi_ioctl.o
+  CC      drivers/scsi/constants.o
+  CC      drivers/scsi/scsicam.o
+  CC      drivers/scsi/scsi_error.o
+  CC      drivers/scsi/scsi_lib.o
+  CC      drivers/scsi/scsi_lib_dma.o
+  CC      drivers/scsi/scsi_scan.o
+  CC      drivers/scsi/scsi_sysfs.o
+  CC      drivers/scsi/scsi_devinfo.o
+  CC      drivers/scsi/scsi_sysctl.o
+  CC      drivers/scsi/scsi_proc.o
+  CC      drivers/scsi/scsi_trace.o
+  CC      drivers/scsi/scsi_pm.o
+  CC      drivers/scsi/sd.o
+  LD      drivers/scsi/scsi_mod.o
+  LD      drivers/scsi/arm/built-in.o
+  LD      drivers/scsi/sd_mod.o
+  LD      drivers/scsi/built-in.o
+  CC [M]  drivers/scsi/scsi_tgt_lib.o
+  CC [M]  drivers/scsi/scsi_tgt_if.o
+  LD [M]  drivers/scsi/scsi_tgt.o
+  CC [M]  drivers/scsi/scsi_wait_scan.o
+  CC      drivers/spi/spi.o
+  LD      drivers/spi/built-in.o
+  CC      drivers/staging/staging.o
+  CC      drivers/staging/android/binder.o
+  CC      drivers/staging/android/ashmem.o
+  CC      drivers/staging/android/logger.o
+  CC      drivers/staging/android/timed_output.o
+  CC      drivers/staging/android/lowmemorykiller.o
+  CC      drivers/staging/android/alarm-dev.o
+  LD      drivers/staging/android/built-in.o
+  LD      drivers/staging/media/built-in.o
+  LD      drivers/staging/serial/built-in.o
+  CC      drivers/staging/zram/zram_drv.o
+  CC      drivers/staging/zram/zram_sysfs.o
+  LD      drivers/staging/zram/zram.o
+  LD      drivers/staging/zram/built-in.o
+  CC      drivers/staging/zsmalloc/zsmalloc-main.o
+  LD      drivers/staging/zsmalloc/zsmalloc.o
+  LD      drivers/staging/zsmalloc/built-in.o
+  LD      drivers/staging/built-in.o
+  CC      drivers/switch/switch_class.o
+  LD      drivers/switch/built-in.o
+  CC      drivers/thermal/thermal_sys.o
+  LD      drivers/thermal/built-in.o
+  CC      drivers/tty/tty_io.o
+  CC      drivers/tty/n_tty.o
+  CC      drivers/tty/tty_ioctl.o
+  CC      drivers/tty/tty_ldisc.o
+  CC      drivers/tty/tty_buffer.o
+  CC      drivers/tty/tty_port.o
+  CC      drivers/tty/tty_mutex.o
+  CC      drivers/tty/pty.o
+  CC      drivers/tty/sysrq.o
+  LD      drivers/tty/ipwireless/built-in.o
+  CC      drivers/tty/serial/serial_core.o
+  CC      drivers/tty/serial/kgdboc.o
+In file included from drivers/tty/serial/kgdboc.c:19:0:
+drivers/tty/serial/kgdboc.c: In function 'kgdboc_pre_exp_handler':
+include/linux/console.h:86:29: warning: statement with no effect [-Wunused-value]
+ #define con_debug_enter(vc) (0)
+                             ^
+drivers/tty/serial/kgdboc.c:304:3: note: in expansion of macro 'con_debug_enter'
+   con_debug_enter(vc_cons[fg_console].d);
+   ^
+drivers/tty/serial/kgdboc.c: In function 'kgdboc_post_exp_handler':
+include/linux/console.h:87:27: warning: statement with no effect [-Wunused-value]
+ #define con_debug_leave() (0)
+                           ^
+drivers/tty/serial/kgdboc.c:318:3: note: in expansion of macro 'con_debug_leave'
+   con_debug_leave();
+   ^
+  LD      drivers/tty/serial/built-in.o
+  LD      drivers/tty/vt/built-in.o
+  LD      drivers/tty/built-in.o
+  LD      drivers/uio/built-in.o
+  CC      drivers/usb/class/cdc-acm.o
+  CC      drivers/usb/class/usblp.o
+  LD      drivers/usb/class/built-in.o
+  CC      drivers/usb/core/usb.o
+  CC      drivers/usb/core/hub.o
+  CC      drivers/usb/core/hcd.o
+  CC      drivers/usb/core/urb.o
+  CC      drivers/usb/core/message.o
+  CC      drivers/usb/core/driver.o
+  CC      drivers/usb/core/config.o
+  CC      drivers/usb/core/file.o
+  CC      drivers/usb/core/buffer.o
+  CC      drivers/usb/core/sysfs.o
+  CC      drivers/usb/core/endpoint.o
+  CC      drivers/usb/core/devio.o
+  CC      drivers/usb/core/notify.o
+  CC      drivers/usb/core/generic.o
+  CC      drivers/usb/core/quirks.o
+  CC      drivers/usb/core/devices.o
+  LD      drivers/usb/core/usbcore.o
+  LD      drivers/usb/core/built-in.o
+  CC      drivers/usb/gadget/udc-core.o
+  CC      drivers/usb/gadget/android.o
+In file included from drivers/usb/gadget/android.c:55:0:
+drivers/usb/gadget/f_adb.c: In function 'adb_debug_read_copy_from_user':
+drivers/usb/gadget/f_adb.c:165:16: warning: unused variable 'dbg' [-Wunused-variable]
+     debuginfo *dbg = (debuginfo*) req->buf;
+                ^
+drivers/usb/gadget/f_adb.c: In function 'adb_write':
+drivers/usb/gadget/f_adb.c:538:4: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+    bool data = true;
+    ^
+drivers/usb/gadget/f_adb.c: In function 'adb_debug_read_copy_from_user':
+drivers/usb/gadget/f_adb.c:167:5: warning: ignoring return value of 'copy_from_user', declared with attribute warn_unused_result [-Wunused-result]
+     copy_from_user(req->buf, buf, req->length);
+     ^
+drivers/usb/gadget/f_adb.c: In function 'adb_debug_read_copy_to_user':
+drivers/usb/gadget/f_adb.c:176:5: warning: ignoring return value of 'copy_to_user', declared with attribute warn_unused_result [-Wunused-result]
+     copy_to_user(buf, req->buf, req->length);
+     ^
+  LD      drivers/usb/gadget/g_android.o
+  LD      drivers/usb/gadget/built-in.o
+  CC      drivers/usb/misc/trancevibrator.o
+  LD      drivers/usb/misc/built-in.o
+  CC      drivers/usb/otg/otg.o
+  CC      drivers/usb/otg/nop-usb-xceiv.o
+  LD      drivers/usb/otg/built-in.o
+  CC      drivers/usb/storage/alauda.o
+  CC      drivers/usb/storage/cypress_atacb.o
+  CC      drivers/usb/storage/datafab.o
+  CC      drivers/usb/storage/freecom.o
+  CC      drivers/usb/storage/isd200.o
+  CC      drivers/usb/storage/jumpshot.o
+  CC      drivers/usb/storage/karma.o
+  CC      drivers/usb/storage/onetouch.o
+  CC      drivers/usb/storage/sddr09.o
+  CC      drivers/usb/storage/sddr55.o
+  CC      drivers/usb/storage/shuttle_usbat.o
+  CC      drivers/usb/storage/scsiglue.o
+  CC      drivers/usb/storage/protocol.o
+  CC      drivers/usb/storage/transport.o
+  CC      drivers/usb/storage/usb.o
+  CC      drivers/usb/storage/initializers.o
+  CC      drivers/usb/storage/sierra_ms.o
+  CC      drivers/usb/storage/option_ms.o
+  CC      drivers/usb/storage/debug.o
+  CC      drivers/usb/storage/usual-tables.o
+  LD      drivers/usb/storage/usb-storage.o
+  LD      drivers/usb/storage/ums-alauda.o
+  LD      drivers/usb/storage/ums-cypress.o
+  LD      drivers/usb/storage/ums-datafab.o
+  LD      drivers/usb/storage/ums-freecom.o
+  LD      drivers/usb/storage/ums-isd200.o
+  LD      drivers/usb/storage/ums-jumpshot.o
+  LD      drivers/usb/storage/ums-karma.o
+  LD      drivers/usb/storage/ums-onetouch.o
+  LD      drivers/usb/storage/ums-sddr09.o
+  LD      drivers/usb/storage/ums-sddr55.o
+  LD      drivers/usb/storage/ums-usbat.o
+  LD      drivers/usb/storage/built-in.o
+  CC      drivers/usb/usb-common.o
+  LD      drivers/usb/built-in.o
+  CC      drivers/video/fb_notify.o
+  CC      drivers/video/fbmem.o
+drivers/video/fbmem.c: In function 'fb_ioctl':
+drivers/video/fbmem.c:1255:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  struct fb_info *info = file_fb_info(file);
+  ^
+drivers/video/fbmem.c: In function 'fb_mmap':
+drivers/video/fbmem.c:1425:19: warning: unused variable 'off' [-Wunused-variable]
+     unsigned long off;
+                   ^
+drivers/video/fbmem.c: In function 'fb_open':
+drivers/video/fbmem.c:1470:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  int fbidx = iminor(inode);
+  ^
+  CC      drivers/video/fbmon.o
+  CC      drivers/video/fbcmap.o
+  CC      drivers/video/fbsysfs.o
+  CC      drivers/video/modedb.o
+  CC      drivers/video/fbcvt.o
+  LD      drivers/video/fb.o
+  LD      drivers/video/backlight/built-in.o
+  CC      drivers/video/logo/logo.o
+  CC      drivers/video/logo/logo_linux_mono.o
+  CC      drivers/video/logo/logo_linux_vga16.o
+  CC      drivers/video/logo/logo_linux_clut224.o
+  LD      drivers/video/logo/built-in.o
+  LD      drivers/video/omap2/displays/built-in.o
+  LD      drivers/video/omap2/built-in.o
+  CC      drivers/video/cfbfillrect.o
+  CC      drivers/video/cfbcopyarea.o
+  CC      drivers/video/cfbimgblt.o
+  LD      drivers/video/built-in.o
+  LD      drivers/built-in.o
+  CC      sound/sound_core.o
+  LD      sound/soundcore.o
+  LD      sound/arm/built-in.o
+  LD      sound/atmel/built-in.o
+  CC      sound/core/memalloc.o
+  CC      sound/core/pcm.o
+  CC      sound/core/pcm_native.o
+  CC      sound/core/pcm_lib.o
+  CC      sound/core/pcm_timer.o
+  CC      sound/core/pcm_misc.o
+  CC      sound/core/pcm_memory.o
+  CC      sound/core/timer.o
+  CC      sound/core/sound.o
+  CC      sound/core/init.o
+  CC      sound/core/memory.o
+  CC      sound/core/info.o
+  CC      sound/core/control.o
+  CC      sound/core/misc.o
+  CC      sound/core/device.o
+  CC      sound/core/sound_oss.o
+  CC      sound/core/info_oss.o
+  LD      sound/core/snd.o
+  LD      sound/core/snd-timer.o
+  LD      sound/core/snd-pcm.o
+  LD      sound/core/snd-page-alloc.o
+  CC      sound/core/oss/pcm_oss.o
+  LD      sound/core/oss/snd-pcm-oss.o
+  LD      sound/core/oss/built-in.o
+  LD      sound/core/built-in.o
+  LD      sound/drivers/mpu401/built-in.o
+  LD      sound/drivers/opl3/built-in.o
+  LD      sound/drivers/opl4/built-in.o
+  LD      sound/drivers/pcsp/built-in.o
+  LD      sound/drivers/vx/built-in.o
+  LD      sound/drivers/built-in.o
+  LD      sound/firewire/built-in.o
+  LD      sound/i2c/other/built-in.o
+  LD      sound/i2c/built-in.o
+  LD      sound/isa/ad1816a/built-in.o
+  LD      sound/isa/ad1848/built-in.o
+  LD      sound/isa/cs423x/built-in.o
+  LD      sound/isa/es1688/built-in.o
+  LD      sound/isa/galaxy/built-in.o
+  LD      sound/isa/gus/built-in.o
+  LD      sound/isa/msnd/built-in.o
+  LD      sound/isa/opti9xx/built-in.o
+  LD      sound/isa/sb/built-in.o
+  LD      sound/isa/wavefront/built-in.o
+  LD      sound/isa/wss/built-in.o
+  LD      sound/isa/built-in.o
+  LD      sound/mips/built-in.o
+  LD      sound/parisc/built-in.o
+  LD      sound/pci/ac97/built-in.o
+  LD      sound/pci/ali5451/built-in.o
+  LD      sound/pci/asihpi/built-in.o
+  LD      sound/pci/au88x0/built-in.o
+  LD      sound/pci/aw2/built-in.o
+  LD      sound/pci/ca0106/built-in.o
+  LD      sound/pci/cs46xx/built-in.o
+  LD      sound/pci/cs5535audio/built-in.o
+  LD      sound/pci/ctxfi/built-in.o
+  LD      sound/pci/echoaudio/built-in.o
+  LD      sound/pci/emu10k1/built-in.o
+  LD      sound/pci/hda/built-in.o
+  LD      sound/pci/ice1712/built-in.o
+  LD      sound/pci/korg1212/built-in.o
+  LD      sound/pci/lola/built-in.o
+  LD      sound/pci/lx6464es/built-in.o
+  LD      sound/pci/mixart/built-in.o
+  LD      sound/pci/nm256/built-in.o
+  LD      sound/pci/oxygen/built-in.o
+  LD      sound/pci/pcxhr/built-in.o
+  LD      sound/pci/riptide/built-in.o
+  LD      sound/pci/rme9652/built-in.o
+  LD      sound/pci/trident/built-in.o
+  LD      sound/pci/vx222/built-in.o
+  LD      sound/pci/ymfpci/built-in.o
+  LD      sound/pci/built-in.o
+  LD      sound/pcmcia/pdaudiocf/built-in.o
+  LD      sound/pcmcia/vx/built-in.o
+  LD      sound/pcmcia/built-in.o
+  LD      sound/ppc/built-in.o
+  LD      sound/sh/built-in.o
+  LD      sound/soc/built-in.o
+  LD      sound/sparc/built-in.o
+  LD      sound/spi/built-in.o
+  LD      sound/synth/built-in.o
+  LD      sound/usb/6fire/built-in.o
+  LD      sound/usb/caiaq/built-in.o
+  LD      sound/usb/misc/built-in.o
+  LD      sound/usb/usx2y/built-in.o
+  LD      sound/usb/built-in.o
+  CC      sound/last.o
+  LD      sound/built-in.o
+  LD      firmware/built-in.o
+  CC      mediatek/kernel/drivers/accdet/accdet_drv.o
+  LD      mediatek/kernel/drivers/accdet/built-in.o
+  CC      mediatek/kernel/drivers/aee/aed/aed-main.o
+  CC      mediatek/kernel/drivers/aee/aed/aed-debug.o
+  CC      mediatek/kernel/drivers/aee/aed/aed-process.o
+  LD      mediatek/kernel/drivers/aee/aed/aed.o
+  LD      mediatek/kernel/drivers/aee/aed/built-in.o
+  CC      mediatek/kernel/drivers/aee/common/aee-common.o
+  CC      mediatek/kernel/drivers/aee/common/reboot-reason.o
+  CC      mediatek/kernel/drivers/aee/common/wdt-handler.o
+  CC      mediatek/kernel/drivers/aee/common/mrdump.o
+mediatek/kernel/drivers/aee/common/mrdump.c: In function 'param_set_mrdump_device':
+mediatek/kernel/drivers/aee/common/mrdump.c:276:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+mediatek/kernel/drivers/aee/common/mrdump.c:261:2: warning: ignoring return value of 'strstrip', declared with attribute warn_unused_result [-Wunused-result]
+  strstrip(strval);
+  ^
+  LD      mediatek/kernel/drivers/aee/common/built-in.o
+  CC      mediatek/kernel/drivers/aee/ipanic/ipanic-mtd.o
+  CC      mediatek/kernel/drivers/aee/ipanic/ipanic-utils.o
+  CC      mediatek/kernel/drivers/aee/ipanic/ipanic-emmc.o
+mediatek/kernel/drivers/aee/ipanic/ipanic-emmc.c:26:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ extern int mt_dump_wq_debugger();
+ ^
+mediatek/kernel/drivers/aee/ipanic/ipanic-emmc.c: In function 'ipanic_write_mmprofile':
+mediatek/kernel/drivers/aee/ipanic/ipanic-emmc.c:337:16: warning: unused variable 'mmprofile_dump_size' [-Wunused-variable]
+   unsigned int mmprofile_dump_size = 0;
+                ^
+mediatek/kernel/drivers/aee/ipanic/ipanic-emmc.c:336:16: warning: unused variable 'bufsize' [-Wunused-variable]
+   unsigned int bufsize = 0;
+                ^
+mediatek/kernel/drivers/aee/ipanic/ipanic-emmc.c:335:16: warning: unused variable 'pbuf' [-Wunused-variable]
+   unsigned int pbuf = 0;
+                ^
+mediatek/kernel/drivers/aee/ipanic/ipanic-emmc.c:334:16: warning: unused variable 'index' [-Wunused-variable]
+   unsigned int index = 0;
+                ^
+mediatek/kernel/drivers/aee/ipanic/ipanic-emmc.c:333:7: warning: unused variable 'rc' [-Wunused-variable]
+   int rc = 0;
+       ^
+  CC      mediatek/kernel/drivers/aee/ipanic/dump-process.o
+  LD      mediatek/kernel/drivers/aee/ipanic/ipanic.o
+  LD      mediatek/kernel/drivers/aee/ipanic/built-in.o
+  LD      mediatek/kernel/drivers/aee/built-in.o
+  CC      mediatek/kernel/drivers/almk/almk_drv.o
+  LD      mediatek/kernel/drivers/almk/almk_driver.o
+  LD      mediatek/kernel/drivers/almk/built-in.o
+  CC      mediatek/kernel/drivers/auxadc/mt_auxadc.o
+  LD      mediatek/kernel/drivers/auxadc/built-in.o
+  CC      mediatek/kernel/drivers/boot/mt_boot_common.o
+  LD      mediatek/kernel/drivers/boot/built-in.o
+  CC      mediatek/kernel/drivers/bthid/hid_keyboard.o
+  LD      mediatek/kernel/drivers/bthid/built-in.o
+  CC      mediatek/kernel/drivers/btif/mtk_btif.o
+  CC      mediatek/kernel/drivers/btif/mtk_btif_exp.o
+  LD      mediatek/kernel/drivers/btif/btif.o
+  LD      mediatek/kernel/drivers/btif/built-in.o
+  LD      mediatek/kernel/drivers/ccci/built-in.o
+  LD      mediatek/kernel/drivers/ccmni/built-in.o
+  CC      mediatek/kernel/drivers/clock/clock.o
+In file included from mediatek/kernel/drivers/clock/clock.c:24:0:
+../mediatek/platform/mt6582/kernel/core/include/mach/clock.h:19:40: warning: 'struct icst307_vco' declared inside parameter list
+  void   (*setvco)(struct clk *, struct icst307_vco vco);
+                                        ^
+../mediatek/platform/mt6582/kernel/core/include/mach/clock.h:19:40: warning: its scope is only this definition or declaration, which is probably not what you want
+  LD      mediatek/kernel/drivers/clock/built-in.o
+  CC      mediatek/kernel/drivers/conn_soc/common/platform/alps/mtk_wcn_consys_stub_alps.o
+  LD      mediatek/kernel/drivers/conn_soc/common/built-in.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/common/linux/pub/stp_chrdev_bt.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/common/linux/pub/stp_chrdev_gps.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/common/core/wmt_core.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/common/core/wmt_ctrl.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/common/core/wmt_func.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/common/core/wmt_ic_soc.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/common/core/wmt_lib.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/common/core/wmt_conf.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/common/linux/pri/wmt_dev.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/common/linux/pri/wmt_exp.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/common/linux/pri/stp_btif.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/common/linux/pub/osal.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/common/linux/pub/bgw_desense.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/common/platform/alps/wmt_plat_alps.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/common/platform/alps/mtk_wcn_consys_hw.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/common/linux/pri/stp_exp.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/common/core/stp_core.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/common/core/psm_core.o
+mediatek/kernel/drivers/conn_soc/common/core/psm_core.c: In function 'stp_psm_init':
+mediatek/kernel/drivers/conn_soc/common/core/psm_core.c:2087:21: warning: assignment from incompatible pointer type
+  g_stp_psm_opid_dbg = (STP_PSM_RECORD_T *)osal_malloc(osal_sizeof(STP_PSM_OPID_RECORD));
+                     ^
+  CC [M]  mediatek/kernel/drivers/conn_soc/common/core/btm_core.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/common/linux/pri/stp_dbg.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/common/linux/pub/wmt_chrdev_wifi.o
+  LD [M]  mediatek/kernel/drivers/conn_soc/common/mtk_stp_wmt.o
+  LD [M]  mediatek/kernel/drivers/conn_soc/common/mtk_stp_bt.o
+  LD [M]  mediatek/kernel/drivers/conn_soc/common/mtk_stp_gps.o
+  LD [M]  mediatek/kernel/drivers/conn_soc/common/mtk_wmt_wifi.o
+  LD      mediatek/kernel/drivers/conn_soc/drv_wlan/built-in.o
+  LD      mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/built-in.o
+  LD      mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/built-in.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/common/dump.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/common/wlan_lib.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/common/wlan_oid.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/common/wlan_bow.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/common/wlan_p2p.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/nic/nic.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/nic/nic_tx.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/nic/nic_rx.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/nic/nic_pwr_mgt.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/nic/cmd_buf.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/nic/que_mgt.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/nic/nic_cmd_event.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/nic/p2p_nic.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/os/linux/gl_init.o
+mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/os/linux/gl_init.c: In function 'wlanLateResume':
+mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/os/linux/gl_init.c:2464:13: warning: unused variable 'u4BufLen' [-Wunused-variable]
+     UINT_32 u4BufLen = 0;
+             ^
+mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/os/linux/gl_init.c:2463:26: warning: unused variable 'rParam' [-Wunused-variable]
+     EVENT_AIS_BSS_INFO_T rParam;
+                          ^
+mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/os/linux/gl_init.c:2458:17: warning: unused variable 'rStatus' [-Wunused-variable]
+     WLAN_STATUS rStatus = WLAN_STATUS_FAILURE;
+                 ^
+mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/os/linux/gl_init.c: In function 'wlanRemove':
+mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/os/linux/gl_init.c:2898:20: warning: unused variable 'fgIsResetting' [-Wunused-variable]
+     extern BOOLEAN fgIsResetting;
+                    ^
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/os/linux/gl_kal.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/os/linux/gl_bow.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/os/linux/gl_wext.o
+mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/os/linux/gl_wext.c: In function 'wext_support_ioctl':
+mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/os/linux/gl_wext.c:3322:9: warning: array subscript is above array bounds [-Warray-bounds]
+         memcpy(prWpiKey->aucPN, prIWEncExt->tx_seq, IW_ENCODE_SEQ_MAX_SIZE * 2);
+         ^
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/os/linux/gl_wext_priv.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/os/linux/gl_rst.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/os/linux/gl_cfg80211.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/os/linux/platform.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/os/linux/gl_p2p.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/os/linux/gl_p2p_cfg80211.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/os/linux/gl_p2p_init.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/os/linux/gl_p2p_kal.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/os/linux/hif/ahb/arm.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/os/linux/hif/ahb/ahb.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/../../../../../../platform/mt6582/kernel/drivers/wifi/ahb_pdma.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/ais_fsm.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/aaa_fsm.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/assoc.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/auth.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/bss.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/cnm.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/cnm_timer.o
+mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/cnm_timer.c: In function 'cnmTimerStopTimer_impl':
+mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/cnm_timer.c:323:2: warning: format '%d' expects argument of type 'int', but argument 5 has type 'UINT_32' [-Wformat=]
+  fgAcquireSpinlock, prRootTimer->rLinkHead.u4NumElem); 
+  ^
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/cnm_mem.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/hem_mbox.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/mib.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/privacy.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/rate.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/rlm.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/rlm_domain.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/rlm_obss.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/rlm_protection.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/rsn.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/saa_fsm.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/scan.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/scan_fsm.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/sec_fsm.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/swcr.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/roaming_fsm.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/p2p_assoc.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/p2p_bss.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/p2p_fsm.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/p2p_func.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/p2p_rlm.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/p2p_rlm_obss.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/p2p_scan.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/p2p_ie.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/p2p_state.o
+  CC [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/mgmt/wapi.o
+  LD [M]  mediatek/kernel/drivers/conn_soc/drv_wlan/mt_wifi/wlan/wlan_mt.o
+  LD      mediatek/kernel/drivers/conn_soc/built-in.o
+  CC      mediatek/kernel/drivers/dbg_dump/dbg_dump.o
+  LD      mediatek/kernel/drivers/dbg_dump/built-in.o
+  LD      mediatek/kernel/drivers/dual_ccci/built-in.o
+  CC [M]  mediatek/kernel/drivers/dual_ccci/ccci_init.o
+  CC [M]  mediatek/kernel/drivers/dual_ccci/ccci_hw.o
+  CC [M]  mediatek/kernel/drivers/dual_ccci/ccci_logical.o
+  CC [M]  mediatek/kernel/drivers/dual_ccci/ccci_md_main.o
+mediatek/kernel/drivers/dual_ccci/ccci_md_main.c:1630:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ extern void ccci_md_logger_notify();
+ ^
+  CC [M]  mediatek/kernel/drivers/dual_ccci/ccci_chrdev.o
+  CC [M]  mediatek/kernel/drivers/dual_ccci/ccci_tty.o
+  CC [M]  mediatek/kernel/drivers/dual_ccci/ccci_ipc.o
+  CC [M]  mediatek/kernel/drivers/dual_ccci/ccci_fs_main.o
+  CC [M]  mediatek/kernel/drivers/dual_ccci/ccci_rpc_main.o
+  CC [M]  mediatek/kernel/drivers/dual_ccci/ccmni_net.o
+  CC [M]  mediatek/kernel/drivers/dual_ccci/ccmni_v2_net.o
+  CC [M]  mediatek/kernel/drivers/dual_ccci/ccmni.o
+  CC [M]  mediatek/kernel/drivers/dual_ccci/ccmni_pfp.o
+  CC [M]  mediatek/kernel/drivers/dual_ccci/ccci_mk_node.o
+  CC [M]  mediatek/kernel/drivers/dual_ccci/ccci_statistics.o
+  LD [M]  mediatek/kernel/drivers/dual_ccci/ccci.o
+  CC      mediatek/kernel/drivers/dum-char/dumchar.o
+  CC      mediatek/kernel/drivers/dum-char/partition_define.o
+  CC      mediatek/kernel/drivers/dum-char/env.o
+  LD      mediatek/kernel/drivers/dum-char/DumChar.o
+  LD      mediatek/kernel/drivers/dum-char/built-in.o
+  CC      mediatek/kernel/drivers/eint/eint_drv.o
+  LD      mediatek/kernel/drivers/eint/built-in.o
+  LD      mediatek/kernel/drivers/emd_ctl/built-in.o
+  CC      mediatek/kernel/drivers/evdo_support/mtk_evdo_host_interface.o
+  LD      mediatek/kernel/drivers/evdo_support/built-in.o
+/S860_ROW_OpenSource/sys/kernel/mediatek/kernel/drivers/fmradio/Makefile:10: feature_option=MT6627_FM
+/S860_ROW_OpenSource/sys/kernel/mediatek/kernel/drivers/fmradio/Makefile:73: MT6627_FM
+/S860_ROW_OpenSource/sys/kernel/mediatek/kernel/drivers/fmradio/Makefile:95: core/fm_module.o core/fm_main.o core/fm_config.o core/fm_rds_parser.o core/fm_patch.o core/fm_utils.o core/fm_link.o core/fm_eint.o mt6627/pub/mt6627_fm_lib.o mt6627/pub/mt6627_fm_rds.o mt6627/pub/mt6627_fm_cmd.o mt6627/pub/mt6627_fm_config.o
+  CC      mediatek/kernel/drivers/fmradio/dummy.o
+  LD      mediatek/kernel/drivers/fmradio/built-in.o
+  CC [M]  mediatek/kernel/drivers/fmradio/core/fm_module.o
+  CC [M]  mediatek/kernel/drivers/fmradio/core/fm_main.o
+mediatek/kernel/drivers/fmradio/core/fm_main.c: In function 'fm_rds_read':
+mediatek/kernel/drivers/fmradio/core/fm_main.c:330:1: warning: label 'RESTART' defined but not used [-Wunused-label]
+ RESTART:
+ ^
+  CC [M]  mediatek/kernel/drivers/fmradio/core/fm_config.o
+  CC [M]  mediatek/kernel/drivers/fmradio/core/fm_rds_parser.o
+  CC [M]  mediatek/kernel/drivers/fmradio/core/fm_patch.o
+  CC [M]  mediatek/kernel/drivers/fmradio/core/fm_utils.o
+  CC [M]  mediatek/kernel/drivers/fmradio/core/fm_link.o
+  CC [M]  mediatek/kernel/drivers/fmradio/core/fm_eint.o
+  CC [M]  mediatek/kernel/drivers/fmradio/mt6627/pub/mt6627_fm_lib.o
+  CC [M]  mediatek/kernel/drivers/fmradio/mt6627/pub/mt6627_fm_rds.o
+  CC [M]  mediatek/kernel/drivers/fmradio/mt6627/pub/mt6627_fm_cmd.o
+  CC [M]  mediatek/kernel/drivers/fmradio/mt6627/pub/mt6627_fm_config.o
+  LD [M]  mediatek/kernel/drivers/fmradio/mtk_fm_drv.o
+  CC      mediatek/kernel/drivers/freqhopping/mt_freqhopping_drv.o
+  LD      mediatek/kernel/drivers/freqhopping/built-in.o
+  CC      mediatek/kernel/drivers/gpio/mt_gpio_core.o
+  LD      mediatek/kernel/drivers/gpio/built-in.o
+  CC      mediatek/kernel/drivers/gps/gps.o
+  LD      mediatek/kernel/drivers/gps/built-in.o
+  CC      mediatek/kernel/drivers/hwmon/hwmsen/hwmsen_helper.o
+  CC      mediatek/kernel/drivers/hwmon/hwmsen/hwmsen_dev.o
+  LD      mediatek/kernel/drivers/hwmon/hwmsen/built-in.o
+  LD      mediatek/kernel/drivers/hwmon/built-in.o
+  CC      mediatek/kernel/drivers/ion_drv/ion_drv.o
+mediatek/kernel/drivers/ion_drv/ion_drv.c: In function 'ion_sys_cache_sync':
+mediatek/kernel/drivers/ion_drv/ion_drv.c:68:22: warning: unused variable 'ppage' [-Wunused-variable]
+         struct page* ppage;
+                      ^
+mediatek/kernel/drivers/ion_drv/ion_drv.c:67:37: warning: unused variable 'i' [-Wunused-variable]
+         unsigned int end, page_num, i, page_start;
+                                     ^
+  CC      mediatek/kernel/drivers/ion_drv/ion_mm_heap.o
+In file included from ../mediatek/platform/mt6582/kernel/core/include/mach/m4u.h:5:0,
+                 from mediatek/kernel/drivers/ion_drv/ion_mm_heap.c:15:
+../mediatek/platform/mt6582/kernel/core/include/mach/m4u_port.h:56:1: warning: useless storage class specifier in empty declaration
+ };
+ ^
+mediatek/kernel/drivers/ion_drv/ion_mm_heap.c: In function 'ion_mm_heap_allocate':
+mediatek/kernel/drivers/ion_drv/ion_mm_heap.c:235:17: warning: passing argument 1 of 'strncpy' from incompatible pointer type
+         strncpy(&(pBufferInfo->dbg_info.dbg_name), "nothing", ION_MM_DBG_NAME_LEN);
+                 ^
+In file included from include/linux/dma-mapping.h:4:0,
+                 from mediatek/kernel/drivers/ion_drv/ion_mm_heap.c:3:
+include/linux/string.h:27:15: note: expected 'char *' but argument is of type 'char (*)[16]'
+ extern char * strncpy(char *,const char *, __kernel_size_t);
+               ^
+  CC      mediatek/kernel/drivers/ion_drv/ion_sys_contig_heap.o
+  LD      mediatek/kernel/drivers/ion_drv/built-in.o
+  CC      mediatek/kernel/drivers/keypad/kpd.o
+mediatek/kernel/drivers/keypad/kpd.c: In function 'kpd_pdrv_probe':
+mediatek/kernel/drivers/keypad/kpd.c:791:5: warning: "LENOVO_STD_LINECTL_EARPHONE" is not defined [-Wundef]
+ #if LENOVO_STD_LINECTL_EARPHONE
+     ^
+mediatek/kernel/drivers/keypad/kpd.c: In function 'kpd_early_suspend':
+mediatek/kernel/drivers/keypad/kpd.c:901:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  int err = 0;
+  ^
+mediatek/kernel/drivers/keypad/kpd.c:901:6: warning: unused variable 'err' [-Wunused-variable]
+  int err = 0;
+      ^
+mediatek/kernel/drivers/keypad/kpd.c: At top level:
+mediatek/kernel/drivers/keypad/kpd.c:30:12: warning: 'incall' defined but not used [-Wunused-variable]
+ static int incall = 0;//this is for whether phone in call state judgement when resume
+            ^
+  LD      mediatek/kernel/drivers/keypad/built-in.o
+  CC      mediatek/kernel/drivers/leds/leds_drv.o
+mediatek/kernel/drivers/leds/leds_drv.c: In function 'get_div_array':
+mediatek/kernel/drivers/leds/leds_drv.c:164:16: warning: iteration 7u invokes undefined behavior [-Waggressive-loop-optimizations]
+   div_array[i] = *temp++;
+                ^
+mediatek/kernel/drivers/leds/leds_drv.c:162:7: note: containing loop
+  while(i<8) {
+       ^
+  LD      mediatek/kernel/drivers/leds/built-in.o
+  CC      mediatek/kernel/drivers/m4u/m4u_kernel.o
+mediatek/kernel/drivers/m4u/m4u_kernel.c: In function '__m4u_get_user_pages':
+mediatek/kernel/drivers/m4u/m4u_kernel.c:399:9: warning: unused variable 'ret' [-Wunused-variable]
+     int ret;
+         ^
+  LD      mediatek/kernel/drivers/m4u/built-in.o
+  CC      mediatek/kernel/drivers/mhl/dummy.o
+  LD      mediatek/kernel/drivers/mhl/built-in.o
+  CC      mediatek/kernel/drivers/mlog/mlog_dump.o
+  CC      mediatek/kernel/drivers/mlog/mlog_logger.o
+  LD      mediatek/kernel/drivers/mlog/mlog.o
+  LD      mediatek/kernel/drivers/mlog/built-in.o
+  CC      mediatek/kernel/drivers/mmp/dummy/mmprofile.o
+In file included from ../mediatek/kernel/include/linux/mmprofile.h:3:0,
+                 from ../mediatek/kernel/include/linux/mmprofile_internal.h:4,
+                 from mediatek/kernel/drivers/mmp/dummy/mmprofile.c:17:
+../mediatek/kernel/include/linux/mmprofile_static_event.h:23:26: warning: 'MMProfileStaticEvents' defined but not used [-Wunused-variable]
+ static MMP_StaticEvent_t MMProfileStaticEvents[] = 
+                          ^
+In file included from mediatek/kernel/drivers/mmp/dummy/mmprofile.c:17:0:
+../mediatek/kernel/include/linux/mmprofile_internal.h:89:13: warning: 'MMProfileInitBuffer' declared 'static' but never defined [-Wunused-function]
+ static void MMProfileInitBuffer(void);
+             ^
+../mediatek/kernel/include/linux/mmprofile_internal.h:90:13: warning: 'MMProfileResetBuffer' declared 'static' but never defined [-Wunused-function]
+ static void MMProfileResetBuffer(void);
+             ^
+  LD      mediatek/kernel/drivers/mmp/dummy/built-in.o
+  LD      mediatek/kernel/drivers/mmp/built-in.o
+  CC      mediatek/kernel/drivers/mtprof/prof_ctl.o
+  CC      mediatek/kernel/drivers/mtprof/prof_main.o
+mediatek/kernel/drivers/mtprof/prof_main.c:398:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ extern int mt_dump_wq_debugger();
+ ^
+  LD      mediatek/kernel/drivers/mtprof/mtprof.o
+  CC      mediatek/kernel/drivers/mtprof/bootprof.o
+  CC      mediatek/kernel/drivers/mtprof/sched_monitor.o
+  CC      mediatek/kernel/drivers/mtprof/monitor_debug_out.o
+  CC      mediatek/kernel/drivers/mtprof/mt_debug_config.o
+  CC      mediatek/kernel/drivers/mtprof/mt_wq_debug.o
+mediatek/kernel/drivers/mtprof/mt_wq_debug.c: In function 'mt_wq_debug_activate_work':
+mediatek/kernel/drivers/mtprof/mt_wq_debug.c:135:28: warning: comparison between pointer and integer
+   if (wqdbg->wklog[i].addr == work)
+                            ^
+mediatek/kernel/drivers/mtprof/mt_wq_debug.c:143:28: warning: comparison between pointer and integer
+   if (wqdbg->wklog[i].addr == work)
+                            ^
+mediatek/kernel/drivers/mtprof/mt_wq_debug.c: At top level:
+mediatek/kernel/drivers/mtprof/mt_wq_debug.c:150:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ int mt_dump_wq_debugger()
+     ^
+mediatek/kernel/drivers/mtprof/mt_wq_debug.c: In function 'mt_dump_wq_debugger':
+mediatek/kernel/drivers/mtprof/mt_wq_debug.c:168:58: warning: passing argument 4 of 'lookup_module_symbol_attrs' from incompatible pointer type
+    ret = lookup_module_symbol_attrs(address, NULL, NULL, &symName, NULL);
+                                                          ^
+mediatek/kernel/drivers/mtprof/mt_wq_debug.c:28:12: note: expected 'char *' but argument is of type 'char (*)[128]'
+ extern int lookup_module_symbol_attrs(unsigned long addr, unsigned long *size,
+            ^
+mediatek/kernel/drivers/mtprof/mt_wq_debug.c:183:58: warning: passing argument 4 of 'lookup_module_symbol_attrs' from incompatible pointer type
+    ret = lookup_module_symbol_attrs(address, NULL, NULL, &symName, NULL);
+                                                          ^
+mediatek/kernel/drivers/mtprof/mt_wq_debug.c:28:12: note: expected 'char *' but argument is of type 'char (*)[128]'
+ extern int lookup_module_symbol_attrs(unsigned long addr, unsigned long *size,
+            ^
+mediatek/kernel/drivers/mtprof/mt_wq_debug.c: At top level:
+mediatek/kernel/drivers/mtprof/mt_wq_debug.c:207:6: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ void mttrace_workqueue_execute_end(work)
+      ^
+  CC      mediatek/kernel/drivers/mtprof/mt_prv_lock.o
+  LD      mediatek/kernel/drivers/mtprof/built-in.o
+  CC      mediatek/kernel/drivers/net/bt_net_dev.o
+  LD      mediatek/kernel/drivers/net/built-in.o
+  CC      mediatek/kernel/drivers/pmic_wrap/mt_pmic_wrap.o
+  LD      mediatek/kernel/drivers/pmic_wrap/built-in.o
+  CC      mediatek/kernel/drivers/power/battery_meter.o
+  CC      mediatek/kernel/drivers/power/battery_common.o
+mediatek/kernel/drivers/power/battery_common.c: In function 'battery_probe':
+mediatek/kernel/drivers/power/battery_common.c:2778:3: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+   if (ret = lenovo_battery_create_sys_file(battery_main.psy.dev))
+   ^
+mediatek/kernel/drivers/power/battery_common.c: At top level:
+mediatek/kernel/drivers/power/battery_common.c:1696:19: warning: 'mt_battery_CheckBatteryTemp' defined but not used [-Wunused-function]
+ static PMU_STATUS mt_battery_CheckBatteryTemp(void)
+                   ^
+mediatek/kernel/drivers/power/battery_common.c:2031:13: warning: 'mt_battery_thermal_check' defined but not used [-Wunused-function]
+ static void mt_battery_thermal_check(void)
+             ^
+  CC      mediatek/kernel/drivers/power/switch_charging.o
+  CC      mediatek/kernel/drivers/power/lenovo_charging.o
+mediatek/kernel/drivers/power/lenovo_charging.c: In function 'lenovo_battery_create_sys_file':
+mediatek/kernel/drivers/power/lenovo_charging.c:1314:2: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if (ret = device_create_file(dev, &dev_attr_chg_current))
+  ^
+mediatek/kernel/drivers/power/lenovo_charging.c:1318:2: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if (ret = device_create_file(dev, &dev_attr_batt_calistatus))
+  ^
+mediatek/kernel/drivers/power/lenovo_charging.c:1322:7: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+       if (ret = device_create_file(dev, &dev_attr_debug_value))
+       ^
+mediatek/kernel/drivers/power/lenovo_charging.c:1326:2: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if (ret = device_create_file(dev, &dev_attr_debug_temp))
+  ^
+mediatek/kernel/drivers/power/lenovo_charging.c:1330:2: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if (ret = device_create_file(dev, &dev_attr_notify_value))
+  ^
+mediatek/kernel/drivers/power/lenovo_charging.c: In function 'lenovo_battery_discharging_kthread':
+mediatek/kernel/drivers/power/lenovo_charging.c:736:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+mediatek/kernel/drivers/power/lenovo_charging.c: In function 'lenovo_battery_create_sys_file':
+mediatek/kernel/drivers/power/lenovo_charging.c:1362:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+  LD      mediatek/kernel/drivers/power/built-in.o
+  CC      mediatek/kernel/drivers/pwm/mt_pwm.o
+mediatek/kernel/drivers/pwm/mt_pwm.c:163:13: warning: 'mt_set_pwm_enable_seqmode' defined but not used [-Wunused-function]
+ static void mt_set_pwm_enable_seqmode(void)
+             ^
+mediatek/kernel/drivers/pwm/mt_pwm.c:178:13: warning: 'mt_set_pwm_disable_seqmode' defined but not used [-Wunused-function]
+ static void mt_set_pwm_disable_seqmode(void)
+             ^
+mediatek/kernel/drivers/pwm/mt_pwm.c:193:12: warning: 'mt_set_pwm_test_sel' defined but not used [-Wunused-function]
+ static S32 mt_set_pwm_test_sel(U32 val)  //val as 0 or 1
+            ^
+mediatek/kernel/drivers/pwm/mt_pwm.c:246:12: warning: 'mt_get_pwm_clk' defined but not used [-Wunused-function]
+ static S32 mt_get_pwm_clk ( U32 pwm_no )
+            ^
+mediatek/kernel/drivers/pwm/mt_pwm.c:815:12: warning: 'mt_get_pwm_send_wavenum' defined but not used [-Wunused-function]
+ static S32 mt_get_pwm_send_wavenum ( U32 pwm_no )
+            ^
+mediatek/kernel/drivers/pwm/mt_pwm.c:918:12: warning: 'mt_set_intr_enable' defined but not used [-Wunused-function]
+ static S32 mt_set_intr_enable(U32 pwm_intr_enable_bit)
+            ^
+mediatek/kernel/drivers/pwm/mt_pwm.c:945:12: warning: 'mt_get_intr_status' defined but not used [-Wunused-function]
+ static S32 mt_get_intr_status(U32 pwm_intr_status_bit)
+            ^
+mediatek/kernel/drivers/pwm/mt_pwm.c:973:12: warning: 'mt_set_intr_ack' defined but not used [-Wunused-function]
+ static S32 mt_set_intr_ack ( U32 pwm_intr_ack_bit )
+            ^
+  LD      mediatek/kernel/drivers/pwm/built-in.o
+  CC      mediatek/kernel/drivers/ram_console/mtk_ram_console.o
+  LD      mediatek/kernel/drivers/ram_console/built-in.o
+  CC      mediatek/kernel/drivers/rtc/mtk_rtc_common.o
+  LD      mediatek/kernel/drivers/rtc/built-in.o
+  CC      mediatek/kernel/drivers/sched/mt_sched.o
+  LD      mediatek/kernel/drivers/sched/built-in.o
+  CC      mediatek/kernel/drivers/thermal/mtk_thermal_monitor.o
+  CC      mediatek/kernel/drivers/thermal/mtk_cooler_shutdown.o
+  CC      mediatek/kernel/drivers/thermal/mtk_cooler_backlight.o
+  CC      mediatek/kernel/drivers/thermal/mtk_cooler_kshutdown.o
+  LD      mediatek/kernel/drivers/thermal/built-in.o
+  CC      mediatek/kernel/drivers/uart/uart.o
+In file included from include/linux/atomic.h:4:0,
+                 from include/linux/debug_locks.h:5,
+                 from include/linux/lockdep.h:23,
+                 from include/linux/sysfs.h:18,
+                 from include/linux/kobject.h:21,
+                 from include/linux/device.h:17,
+                 from include/linux/platform_device.h:14,
+                 from mediatek/kernel/drivers/uart/uart.c:31:
+mediatek/kernel/drivers/uart/uart.c: In function 'mtk_uart_sysfs':
+mediatek/kernel/drivers/uart/uart.c:215:63: warning: iteration 6u invokes undefined behavior [-Waggressive-loop-optimizations]
+         atomic_set(&obj->vffLen[idx], mtk_uart_vfifo_port[idx].size);
+                                                               ^
+/S860_ROW_OpenSource/sys/kernel/arch/arm/include/asm/atomic.h:39:44: note: in definition of macro 'atomic_set'
+ #define atomic_set(v,i) (((v)->counter) = (i))
+                                            ^
+mediatek/kernel/drivers/uart/uart.c:214:5: note: containing loop
+     for (idx = 0; idx < ARRAY_SIZE(obj->vffLen); idx++)
+     ^
+  CC      mediatek/kernel/drivers/uart/mt_fiq_debugger.o
+  LD      mediatek/kernel/drivers/uart/built-in.o
+  LD      mediatek/kernel/drivers/usb11/built-in.o
+  CC      mediatek/kernel/drivers/usb20/musb_core.o
+  CC      mediatek/kernel/drivers/usb20/musb_gadget_ep0.o
+  CC      mediatek/kernel/drivers/usb20/musb_gadget.o
+  CC      mediatek/kernel/drivers/usb20/musb_virthub.o
+  CC      mediatek/kernel/drivers/usb20/musb_host.o
+mediatek/kernel/drivers/usb20/musb_host.c: In function 'musb_ep_program':
+mediatek/kernel/drivers/usb20/musb_host.c:1073:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     u16 shortPkt = (length%qh->maxpacket)? 1 : 0;
+     ^
+  CC      mediatek/kernel/drivers/usb20/musbhsdma.o
+  CC      mediatek/kernel/drivers/usb20/musb_debugfs.o
+  LD      mediatek/kernel/drivers/usb20/musb_hdrc.o
+  LD      mediatek/kernel/drivers/usb20/built-in.o
+  CC      mediatek/kernel/drivers/vibrator/vibrator_drv.o
+  LD      mediatek/kernel/drivers/vibrator/built-in.o
+  CC      mediatek/kernel/drivers/video/disp_drv.o
+In file included from ../mediatek/platform/mt6582/kernel/core/include/mach/m4u.h:5:0,
+                 from ../mediatek/platform/mt6582/kernel/drivers/video/disp_drv_platform.h:45,
+                 from mediatek/kernel/drivers/video/disp_drv.c:8:
+../mediatek/platform/mt6582/kernel/core/include/mach/m4u_port.h:56:1: warning: useless storage class specifier in empty declaration
+ };
+ ^
+In file included from ../mediatek/platform/mt6582/kernel/drivers/video/disp_drv_platform.h:57:0,
+                 from mediatek/kernel/drivers/video/disp_drv.c:8:
+../mediatek/platform/mt6582/kernel/drivers/video/dsi_drv.h:277:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ DSI_STATUS DSI_Wait_VDO_Idle();
+ ^
+In file included from mediatek/kernel/drivers/video/debug.h:34:0,
+                 from mediatek/kernel/drivers/video/disp_drv.c:11:
+../mediatek/kernel/include/linux/mmprofile.h:5:0: warning: "DEFAULT_MMP_ENABLE" redefined
+ #define DEFAULT_MMP_ENABLE
+ ^
+<command-line>:0:0: note: this is the location of the previous definition
+mediatek/kernel/drivers/video/disp_drv.c: In function 'DISP_SelectDeviceBoot':
+mediatek/kernel/drivers/video/disp_drv.c:821:48: warning: passing argument 2 of 'disphal_get_lcm_driver' from incompatible pointer type
+     lcm_drv = disphal_get_lcm_driver(lcm_name, &u4IndexOfLCMList);
+                                                ^
+In file included from mediatek/kernel/drivers/video/disp_drv.h:9:0,
+                 from mediatek/kernel/drivers/video/disp_drv.c:6:
+../mediatek/platform/mt6582/kernel/drivers/video/disp_hal.h:74:19: note: expected 'unsigned int *' but argument is of type 'long unsigned int *'
+ const LCM_DRIVER *disphal_get_lcm_driver(const char *lcm_name, unsigned int *lcm_index);
+                   ^
+mediatek/kernel/drivers/video/disp_drv.c: In function 'DISP_SetCabcMode':
+mediatek/kernel/drivers/video/disp_drv.c:873:14: error: 'LCM_DRIVER' has no member named 'set_cabcmode'
+  if (!lcm_drv->set_cabcmode) {
+              ^
+mediatek/kernel/drivers/video/disp_drv.c:878:9: error: 'LCM_DRIVER' has no member named 'set_cabcmode'
+  lcm_drv->set_cabcmode(mode);
+         ^
+mediatek/kernel/drivers/video/disp_drv.c: In function 'DISP_SetInverseMode':
+mediatek/kernel/drivers/video/disp_drv.c:890:14: error: 'LCM_DRIVER' has no member named 'set_inversemode'
+  if (!lcm_drv->set_inversemode) {
+              ^
+mediatek/kernel/drivers/video/disp_drv.c:895:9: error: 'LCM_DRIVER' has no member named 'set_inversemode'
+  lcm_drv->set_inversemode(mode);
+         ^
+mediatek/kernel/drivers/video/disp_drv.c: In function 'DISP_Init':
+mediatek/kernel/drivers/video/disp_drv.c:1082:13: error: 'LCM_DRIVER' has no member named 'set_cabcmode'
+   if(lcm_drv->set_cabcmode)
+             ^
+mediatek/kernel/drivers/video/disp_drv.c:1084:13: error: 'LCM_DRIVER' has no member named 'set_inversemode'
+   if(lcm_drv->set_inversemode)
+             ^
+mediatek/kernel/drivers/video/disp_drv.c: In function '_DISP_MergeOVLDirty':
+mediatek/kernel/drivers/video/disp_drv.c:1899:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   OVL_CONFIG_STRUCT *pConfig = &captured_layer_config[index];
+   ^
+mediatek/kernel/drivers/video/disp_drv.c: In function '_DISP_ConfigDlinkDatapath':
+mediatek/kernel/drivers/video/disp_drv.c:1933:19: warning: unused variable 'flags' [-Wunused-variable]
+     unsigned long flags;
+                   ^
+mediatek/kernel/drivers/video/disp_drv.c: In function '_DISP_ConfigUpdateKThread':
+mediatek/kernel/drivers/video/disp_drv.c:2026:9: warning: unused variable 'index' [-Wunused-variable]
+     int index = 0;
+         ^
+mediatek/kernel/drivers/video/disp_drv.c:2024:9: warning: unused variable 'i' [-Wunused-variable]
+     int i;
+         ^
+mediatek/kernel/drivers/video/disp_drv.c: In function '_DISP_RegUpdateCallback':
+mediatek/kernel/drivers/video/disp_drv.c:2149:19: warning: unused variable 'flags' [-Wunused-variable]
+     unsigned long flags;
+                   ^
+mediatek/kernel/drivers/video/disp_drv.c:2148:9: warning: unused variable 'i' [-Wunused-variable]
+     int i;
+         ^
+mediatek/kernel/drivers/video/disp_drv.c: In function 'DISP_GetPhysicalHeight':
+mediatek/kernel/drivers/video/disp_drv.c:2462:67: error: 'LCM_PARAMS' has no member named 'physical_height'
+         printk("[wwy]lcm_parms->physical_height = %d\n",lcm_params->physical_height);
+                                                                   ^
+mediatek/kernel/drivers/video/disp_drv.c:2463:26: error: 'LCM_PARAMS' has no member named 'physical_height'
+         return lcm_params->physical_height;
+                          ^
+mediatek/kernel/drivers/video/disp_drv.c: In function 'DISP_GetPhysicalWidth':
+mediatek/kernel/drivers/video/disp_drv.c:2477:66: error: 'LCM_PARAMS' has no member named 'physical_width'
+         printk("[wwy]lcm_parms->physical_width = %d\n",lcm_params->physical_width);
+                                                                  ^
+mediatek/kernel/drivers/video/disp_drv.c:2478:26: error: 'LCM_PARAMS' has no member named 'physical_width'
+         return lcm_params->physical_width;
+                          ^
+mediatek/kernel/drivers/video/disp_drv.c: In function 'DISP_Auto_Capture_FB':
+mediatek/kernel/drivers/video/disp_drv.c:3126:6: warning: the address of 'DISP_IsDecoupleMode' will always evaluate as 'true' [-Waddress]
+  if (DISP_IsDecoupleMode) {
+      ^
+mediatek/kernel/drivers/video/disp_drv.c: In function 'DISP_GetPhysicalHeight':
+mediatek/kernel/drivers/video/disp_drv.c:2470:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+mediatek/kernel/drivers/video/disp_drv.c: In function 'DISP_GetPhysicalWidth':
+mediatek/kernel/drivers/video/disp_drv.c:2485:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make[3]: *** [mediatek/kernel/drivers/video/disp_drv.o] Error 1
+make[2]: *** [mediatek/kernel/drivers/video] Error 2
+make[1]: *** [mediatek/kernel/drivers] Error 2
+make: *** [mediatek/kernel] Error 2
+
+

@@ -1,0 +1,1 @@
+cmd_mediatek/kernel/drivers/uart/built-in.o :=  /home/mahmoud/prebuilts/gcc/linux-x86/arm/arm-linux-eabi-linaro-4.9/bin/arm-eabi-ld.bfd -EL    -r -o mediatek/kernel/drivers/uart/built-in.o mediatek/kernel/drivers/uart/uart.o mediatek/kernel/drivers/uart/mt_fiq_debugger.o 

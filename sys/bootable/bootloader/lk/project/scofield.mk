@@ -1,0 +1,1 @@
+lenovo82_wet_jb5.mk

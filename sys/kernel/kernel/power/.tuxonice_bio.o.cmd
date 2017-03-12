@@ -1,0 +1,1 @@
+cmd_kernel/power/tuxonice_bio.o := /home/mahmoud/prebuilts/gcc/linux-x86/arm/arm-linux-eabi-linaro-4.9/bin/arm-eabi-ld.bfd -EL    -r -o kernel/power/tuxonice_bio.o kernel/power/tuxonice_bio_core.o kernel/power/tuxonice_bio_chains.o kernel/power/tuxonice_bio_signature.o 

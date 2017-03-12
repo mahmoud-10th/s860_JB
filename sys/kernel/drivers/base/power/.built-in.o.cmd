@@ -1,0 +1,1 @@
+cmd_drivers/base/power/built-in.o :=  /home/mahmoud/prebuilts/gcc/linux-x86/arm/arm-linux-eabi-linaro-4.9/bin/arm-eabi-ld.bfd -EL    -r -o drivers/base/power/built-in.o drivers/base/power/sysfs.o drivers/base/power/generic_ops.o drivers/base/power/common.o drivers/base/power/qos.o drivers/base/power/main.o drivers/base/power/wakeup.o 

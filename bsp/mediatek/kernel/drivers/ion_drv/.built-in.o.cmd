@@ -1,0 +1,1 @@
+cmd_mediatek/kernel/drivers/ion_drv/built-in.o :=  /home/mahmoud/prebuilts/gcc/linux-x86/arm/arm-linux-eabi-linaro-4.9/bin/arm-eabi-ld.bfd -EL    -r -o mediatek/kernel/drivers/ion_drv/built-in.o mediatek/kernel/drivers/ion_drv/ion_drv.o mediatek/kernel/drivers/ion_drv/ion_mm_heap.o mediatek/kernel/drivers/ion_drv/ion_sys_contig_heap.o 

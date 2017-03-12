@@ -1,0 +1,1 @@
+cmd_mediatek/kernel/drivers/btif/btif.o := /home/mahmoud/prebuilts/gcc/linux-x86/arm/arm-linux-eabi-linaro-4.9/bin/arm-eabi-ld.bfd -EL    -r -o mediatek/kernel/drivers/btif/btif.o mediatek/kernel/drivers/btif/mtk_btif.o mediatek/kernel/drivers/btif/mtk_btif_exp.o 

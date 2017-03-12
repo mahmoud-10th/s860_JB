@@ -1,0 +1,1 @@
+cmd_mediatek/kernel/drivers/aee/aed/aed.o := /home/mahmoud/prebuilts/gcc/linux-x86/arm/arm-linux-eabi-linaro-4.9/bin/arm-eabi-ld.bfd -EL    -r -o mediatek/kernel/drivers/aee/aed/aed.o mediatek/kernel/drivers/aee/aed/aed-main.o mediatek/kernel/drivers/aee/aed/aed-debug.o mediatek/kernel/drivers/aee/aed/aed-process.o 

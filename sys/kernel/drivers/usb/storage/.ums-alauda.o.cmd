@@ -1,0 +1,1 @@
+cmd_drivers/usb/storage/ums-alauda.o := /home/mahmoud/prebuilts/gcc/linux-x86/arm/arm-linux-eabi-linaro-4.9/bin/arm-eabi-ld.bfd -EL    -r -o drivers/usb/storage/ums-alauda.o drivers/usb/storage/alauda.o 

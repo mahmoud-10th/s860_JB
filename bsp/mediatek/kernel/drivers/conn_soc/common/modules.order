@@ -1,0 +1,4 @@
+kernel/mediatek/kernel/drivers/conn_soc/common/mtk_stp_wmt.ko
+kernel/mediatek/kernel/drivers/conn_soc/common/mtk_stp_bt.ko
+kernel/mediatek/kernel/drivers/conn_soc/common/mtk_stp_gps.ko
+kernel/mediatek/kernel/drivers/conn_soc/common/mtk_wmt_wifi.ko

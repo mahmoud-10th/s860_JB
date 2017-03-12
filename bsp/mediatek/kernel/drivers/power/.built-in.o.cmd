@@ -1,0 +1,1 @@
+cmd_mediatek/kernel/drivers/power/built-in.o :=  /home/mahmoud/prebuilts/gcc/linux-x86/arm/arm-linux-eabi-linaro-4.9/bin/arm-eabi-ld.bfd -EL    -r -o mediatek/kernel/drivers/power/built-in.o mediatek/kernel/drivers/power/battery_meter.o mediatek/kernel/drivers/power/battery_common.o mediatek/kernel/drivers/power/switch_charging.o mediatek/kernel/drivers/power/lenovo_charging.o 
